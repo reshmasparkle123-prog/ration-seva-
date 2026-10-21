@@ -12,3 +12,36 @@ Currently, two official plugins are available:
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
 
+
+## Backend API (FastAPI)
+
+`backend/main.py` exposes the Cloudinary scripts in `scripts/` over HTTP for the React app.
+
+| Endpoint | Body (multipart/form-data) | Returns |
+|---|---|---|
+| `GET /health` | - | `{"status": "ok"}` |
+| `POST /proof` | `image`, `fps_id`, `event` (`stock_arrival` \| `doorstep_delivery` \| `weighing` \| `complaint`), optional `lat`, `lng`, `note` | stamped / thumbnail URLs. For `doorstep_delivery` and `complaint`, `original_url` (unblurred) is **not** returned |
+| `POST /scale-check` | `image`, `fps_id`, `expected_kg`, optional `commodity`, `tolerance_kg` (default 0.1), `lat`, `lng` | OCR reading + `verdict` (`OK` \| `SHORT_WEIGHT` \| `UNREADABLE` \| `OCR_UNAVAILABLE`) |
+
+Uploads must be real images (checked by file signature) and at most 10 MB. Otherwise the API returns 415 or 413.
+
+### Run locally
+
+```bash
+python -m pip install -r backend/requirements.txt
+cp backend/.env.example backend/.env    # fill in Cloudinary creds (scripts/.env is also picked up)
+uvicorn backend.main:app --reload       # run from the repo root -> http://localhost:8000/docs
+```
+
+CORS allows `http://localhost:5173` (Vite) by default. Add more origins with `FRONTEND_ORIGIN` (comma-separated).
+
+### Deploy to Render
+
+1. New → **Web Service** → connect this repo. Leave **Root Directory** empty, because the backend imports `scripts/`.
+2. Runtime: **Python 3**
+   - Build command: `pip install -r backend/requirements.txt`
+   - Start command: `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
+   - Health check path: `/health`
+3. Environment variables: `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`, and `FRONTEND_ORIGIN` (your deployed frontend URL, e.g. `https://rationseva.vercel.app`).
+
+`.env` files are git-ignored. Never commit Cloudinary creds.

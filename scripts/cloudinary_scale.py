@@ -87,6 +87,10 @@ def check_scale(image, fps_id, expected_kg, commodity=None, tolerance_kg=0.1, la
         verdict, message = "OCR_UNAVAILABLE", f"OCR status: {status}. Is the OCR add-on enabled?"
     elif reading is None:
         verdict, message = "UNREADABLE", "Couldn't read the scale. Ask the user to retake the photo or type the weight."
+    elif reading > expected_kg * 1.5 and reading > expected_kg + 2:
+        # way over entitlement -> more likely a misread / wrong photo than generous dealer
+        verdict, message = "NEEDS_REVIEW", (f"Reading {reading} kg is far above entitlement {expected_kg} kg - "
+                                            "possible misread or wrong photo. Please retake or enter weight manually.")
     elif reading + tolerance_kg < expected_kg:
         short = expected_kg - reading
         verdict, message = "SHORT_WEIGHT", f"Scale shows {reading} kg, entitled {expected_kg} kg -> short by {short:.2f} kg"

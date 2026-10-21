@@ -27,6 +27,8 @@ dist-ssr
 !.env.example
 
 
-  .env
-  output/
-  __pycache__/
+output/
+__pycache__/
+
+scripts/*.jpg
+scripts/*.png
