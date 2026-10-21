@@ -76,22 +76,44 @@ def text_layer(text, size, y, bold=True):
     }
 
 
-def stamp_transformation(fps_id, event, captured_at, lat=None, lng=None):
+# which privacy blur each event gets by default
+DEFAULT_BLUR = {
+    "stock_arrival": "none",           # photo of sacks, no people
+    "weighing": "none",                # we NEED the scale digits readable
+    "doorstep_delivery": "faces",      # beneficiary's face at their home
+    "complaint": "faces+text",         # may show faces, ration card / Aadhaar numbers
+}
+
+
+def privacy_layers(blur):
+    """Cloudinary effects that hide personal info BEFORE the stamp is drawn."""
+    layers = []
+    if blur in ("faces", "faces+text"):
+        layers.append({"effect": "pixelate_faces:20"})                        # built-in face detection
+    if blur in ("text", "faces+text"):
+        layers.append({"effect": "pixelate_region:20", "gravity": "ocr_text"})  # needs OCR add-on
+    return layers
+
+
+def stamp_transformation(fps_id, event, captured_at, lat=None, lng=None, blur="none"):
     line1 = f"FPS {fps_id} | {EVENTS[event]}"
     line2 = captured_at.strftime("%d %b %Y %I:%M %p IST")
     if lat is not None and lng is not None:
         line2 += f" | GPS {lat:.5f}, {lng:.5f}"
     return [
         {"width": 1280, "crop": "limit"},          # cap size for phones
-        text_layer(line2, 26, 20, bold=False),     # bottom line
-        text_layer(line1, 34, 62),                 # line above it
+        *privacy_layers(blur),                     # blur faces / text first...
+        text_layer(line2, 26, 20, bold=False),     # ...then draw the stamp on top (stays readable)
+        text_layer(line1, 34, 62),
         {"fetch_format": "auto", "quality": "auto"},  # smallest format the device supports
     ]
 
 
-def upload_proof(image, fps_id, event, lat=None, lng=None, note=None):
+def upload_proof(image, fps_id, event, lat=None, lng=None, note=None, blur="auto", **upload_extra):
     if event not in EVENTS:
         raise ValueError(f"event must be one of {list(EVENTS)}")
+    if blur == "auto":
+        blur = DEFAULT_BLUR[event]
     captured_at = datetime.now(IST)
     stamp = captured_at.strftime("%Y%m%d_%H%M%S")
 
@@ -101,6 +123,10 @@ def upload_proof(image, fps_id, event, lat=None, lng=None, note=None):
     if note:
         context["note"] = note
 
+    # Photos that need blurring hold personal info -> store them PRIVATE ("authenticated"):
+    # the unblurred original can't be opened by guessing the URL, only via signed links.
+    delivery = "authenticated" if blur != "none" else "upload"
+
     res = cloudinary.uploader.upload(
         image,
         folder=f"rationseva/{event}/{fps_id}",
@@ -108,14 +134,21 @@ def upload_proof(image, fps_id, event, lat=None, lng=None, note=None):
         tags=["rationseva", event, f"fps_{fps_id}"],
         context=context,
         resource_type="image",
+        type=delivery,
+        **upload_extra,
     )
 
     pid = res["public_id"]
-    stamped_url, _ = cloudinary_url(pid, transformation=stamp_transformation(fps_id, event, captured_at, lat, lng))
+    # sign_url=True: required for add-on effects (OCR text blur), and stops anyone
+    # from editing the URL to strip the blur or the stamp.
+    signed = {"type": delivery, "sign_url": True}
+    original_url, _ = cloudinary_url(pid, format=res.get("format"), **signed)
+    stamped_url, _ = cloudinary_url(pid, transformation=stamp_transformation(fps_id, event, captured_at, lat, lng, blur), **signed)
     thumb_url, _ = cloudinary_url(pid, transformation=[
+        *privacy_layers(blur),
         {"width": 300, "height": 300, "crop": "fill", "gravity": "auto"},
         {"fetch_format": "auto", "quality": "auto"},
-    ])
+    ], **signed)
 
     return {
         "fps_id": fps_id,
@@ -124,10 +157,13 @@ def upload_proof(image, fps_id, event, lat=None, lng=None, note=None):
         "lat": lat,
         "lng": lng,
         "public_id": pid,
-        "original_url": res["secure_url"],
+        "original_url": original_url,   # unblurred - store for officials only, never show publicly
+        "storage": delivery,
         "stamped_url": stamped_url,
         "thumb_url": thumb_url,
+        "privacy_blur": blur,
         "bytes": res.get("bytes"),
+        "_raw": res,   # full Cloudinary response (used by the scale reader); dropped when printing
     }
 
 
@@ -139,9 +175,12 @@ if __name__ == "__main__":
     ap.add_argument("--lat", type=float)
     ap.add_argument("--lng", type=float)
     ap.add_argument("--note")
+    ap.add_argument("--blur", default="auto", choices=["auto", "none", "faces", "text", "faces+text"],
+                    help="privacy blur; 'auto' picks per event ('text' needs the OCR add-on)")
     args = ap.parse_args()
 
     configure()
-    result = upload_proof(args.image, args.fps, args.event, args.lat, args.lng, args.note)
+    result = upload_proof(args.image, args.fps, args.event, args.lat, args.lng, args.note, args.blur)
+    result.pop("_raw")
     print(json.dumps(result, indent=2))
     print("\nOpen stamped_url in your browser to see the stamp.")
