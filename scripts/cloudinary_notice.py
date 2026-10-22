@@ -57,7 +57,7 @@ LANGS = {
         "names": {
             "Rice": "బియ్యం", "FRice": "ఫోర్టిఫైడ్ బియ్యం", "Sugar": "చక్కెర", "SUGAR HALF KG": "చక్కెర (అర కిలో)",
             "Redgram Dal": "కందిపప్పు", "Raagi": "రాగులు", "Jowar": "జొన్నలు",
-            "Whole Wheat Atta": "గోధుమ పిండి", "Salt": "ఉప్పు", "Palmolein Oil": "పామాయిల్",
+            "Whole Wheat Atta": "గోధుమ పిండి", "Salt": "ఉప్పు", "Palmolein Oil": "పామాయిల్", "RagiPowder 1kg": "రాగి పిండి",
         },
     },
     "hi": {
@@ -69,7 +69,7 @@ LANGS = {
         "names": {
             "Rice": "चावल", "FRice": "फोर्टिफाइड चावल", "Sugar": "चीनी", "SUGAR HALF KG": "चीनी (आधा किलो)",
             "Redgram Dal": "अरहर दाल", "Raagi": "रागी", "Jowar": "ज्वार",
-            "Whole Wheat Atta": "गेहूं आटा", "Salt": "नमक", "Palmolein Oil": "पामोलीन तेल",
+            "Whole Wheat Atta": "गेहूं आटा", "Salt": "नमक", "Palmolein Oil": "पामोलीन तेल", "RagiPowder 1kg": "रागी आटा",
         },
     },
     "en": {
@@ -168,9 +168,16 @@ def notice_lines(shop, lang):
     for c in shop["commodities"]:
         if c["status"] not in ("AVAILABLE", "LOW"):
             continue
-        name = L["names"].get(c["commodity"], c["commodity"])
-        unit = L["units"].get(c["unit"].upper(), c["unit"])
-        items.append({"commodity": c["commodity"], "status": c["status"],
+        name = L["names"].get(c["commodity"])
+        font = L["font"]
+        if name is None:
+            # unmapped -> English name; the Telugu/Devanagari fonts have no Latin letters,
+            # so render the whole line (incl. unit) in Noto Sans instead of showing boxes
+            name, L_unit, font = LANGS["en"]["names"].get(c["commodity"], c["commodity"]), LANGS["en"], "NotoSans-Bold.ttf"
+        else:
+            L_unit = L
+        unit = L_unit["units"].get(c["unit"].upper(), c["unit"])
+        items.append({"commodity": c["commodity"], "status": c["status"], "font": font,
                       "line": f"{name}  {fmt_qty(c['closing'], c['unit'])} {unit}"})
     return items
 
@@ -198,7 +205,7 @@ def build_notice(fps_id, language="te", photo_public_id=None, timings=None):
     layers.append(text(L["title"], L["font"], 68, 90, color="rgb:FFD54F"))
     y = 250
     for it in items:
-        layers.append(text(it["line"], L["font"], 52, y))
+        layers.append(text(it["line"], it["font"], 52, y))
         y += 80
         if it["status"] == "LOW":
             layers.append(text(L["low"], L["font"], 38, y - 8, color="rgb:FF8A65"))

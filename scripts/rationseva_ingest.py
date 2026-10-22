@@ -36,6 +36,8 @@ import openpyxl
 TOLERANCE = 0.01          # allowed rounding difference in kg/pkt
 LOW_STOCK_RATIO = 0.10    # closing < 10% of month's available stock => LOW
 DEFAULT_STALE_HOURS = 48  # data older than this => STALE
+# empty sacks the shop returns (10KG BAG, Feb 15Kg Bag, Empty Gunny Bag ...) - not ration for beneficiaries
+PACKAGING_RE = re.compile(r"\bbags?\b|gunny", re.I)
 
 MAIN_RE = re.compile(r"^(?P<district>.+)_(?P<afso>[^_]+)_(?P<fps>\d{5,})_Main\.xlsx$", re.I)
 SCHEME_RE = re.compile(r"^(?P<district>.+)_(?P<afso>[^_]+)_(?P<fps>\d{5,})_(?P<commodity>.+)_Scheme\.xlsx$", re.I)
@@ -171,7 +173,9 @@ def check_row(r, data_age_hours, stale_hours):
     if data_age_hours is not None and data_age_hours > stale_hours:
         flags.append(("STALE_DATA", "warning", f"Report data is {data_age_hours:.0f}h old"))
 
-    if available == 0 and r["issued"] == 0:
+    if PACKAGING_RE.search(r["commodity"]):
+        status = "PACKAGING"      # kept in stock.csv, never shown as stock or flagged LOW/OUT
+    elif available == 0 and r["issued"] == 0:
         status = "NOT_ALLOTTED"
     elif r["closing"] <= TOLERANCE:
         status = "OUT_OF_STOCK"
@@ -304,7 +308,7 @@ def main():
             "commodities": [
                 {"commodity": r["commodity"], "unit": r["unit"], "closing": r["closing"],
                  "received": r["received"], "issued": r["issued"], "status": r["status"]}
-                for r in rows if r["status"] != "NOT_ALLOTTED"
+                for r in rows if r["status"] not in ("NOT_ALLOTTED", "PACKAGING")
             ],
             "not_allotted_count": sum(r["status"] == "NOT_ALLOTTED" for r in rows),
             "flags": [f for f in flags if f["fps_id"] == fps],
