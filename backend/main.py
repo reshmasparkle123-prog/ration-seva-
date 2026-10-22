@@ -23,9 +23,9 @@ from fastapi.middleware.cors import CORSMiddleware
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))   # cloudinary_scale imports cloudinary_proof by bare name
 
-from cloudinary_proof import configure, upload_proof  # noqa: E402
-from cloudinary_scale import check_scale              # noqa: E402
-from cloudinary_notice import build_notice            # noqa: E402
+from cloudinary_proof import configure, proof_from_incoming, sign_upload, upload_proof  # noqa: E402
+from cloudinary_scale import check_scale, check_scale_incoming                        # noqa: E402
+from cloudinary_notice import build_notice, load_shop                                 # noqa: E402
 
 # backend/.env first, then repo-root .env; configure() then falls back to scripts/.env.
 # Real environment variables (e.g. set on Render) always win - load_dotenv never overrides them.
@@ -106,16 +106,58 @@ def health():
     return {"status": "ok"}
 
 
+Event = Literal["stock_arrival", "doorstep_delivery", "weighing", "complaint"]
+
+
+def file_or_public_id(image, public_id):
+    if (image is None) == (not public_id):
+        raise HTTPException(400, "Send exactly one of: image (file) or public_id (Upload Widget result)")
+
+
+def widget_call(fn, *args):
+    """cloudinary_call for widget uploads: bad public_id -> 400, unknown asset -> 404."""
+    try:
+        return cloudinary_call(fn, *args)
+    except ValueError as e:
+        raise HTTPException(400, str(e)) from e
+    except LookupError as e:
+        raise HTTPException(404, str(e)) from e
+
+
+@app.get("/upload-signature")
+def upload_signature(
+    event: Event,
+    fps_id: str,
+    timestamp: Optional[int] = None,            # only to re-sign the widget's own timestamp
+    custom_coordinates: Optional[str] = None,   # added by the widget when the user crops
+):
+    try:
+        load_shop(fps_id)
+    except LookupError as e:
+        raise HTTPException(404, str(e)) from e
+    except FileNotFoundError as e:
+        raise HTTPException(503, "Stock summary not available yet") from e
+    try:
+        return sign_upload(event, fps_id, timestamp, custom_coordinates)   # never contains the API secret
+    except ValueError as e:
+        raise HTTPException(400, str(e)) from e
+
+
 @app.post("/proof")
 def proof(
-    image: UploadFile = File(...),
+    image: Optional[UploadFile] = File(None),
+    public_id: Optional[str] = Form(None),
     fps_id: str = Form(...),
-    event: Literal["stock_arrival", "doorstep_delivery", "weighing", "complaint"] = Form(...),
+    event: Event = Form(...),
     lat: Optional[float] = Form(None),
     lng: Optional[float] = Form(None),
     note: Optional[str] = Form(None),
 ):
-    result = cloudinary_call(upload_proof, read_image(image), fps_id, event, lat, lng, note)
+    file_or_public_id(image, public_id)
+    if public_id:
+        result = widget_call(proof_from_incoming, public_id, fps_id, event, lat, lng, note)
+    else:
+        result = cloudinary_call(upload_proof, read_image(image), fps_id, event, lat, lng, note)
     result.pop("_raw", None)
     if event in PRIVATE_EVENTS:
         result.pop("original_url", None)
@@ -124,7 +166,8 @@ def proof(
 
 @app.post("/scale-check")
 def scale_check(
-    image: UploadFile = File(...),
+    image: Optional[UploadFile] = File(None),
+    public_id: Optional[str] = Form(None),
     fps_id: str = Form(...),
     expected_kg: float = Form(..., gt=0),
     commodity: Optional[str] = Form(None),
@@ -132,7 +175,11 @@ def scale_check(
     lat: Optional[float] = Form(None),
     lng: Optional[float] = Form(None),
 ):
-    result = cloudinary_call(check_scale, read_image(image), fps_id, expected_kg, commodity, tolerance_kg, lat, lng)
+    file_or_public_id(image, public_id)
+    if public_id:
+        result = widget_call(check_scale_incoming, public_id, fps_id, expected_kg, commodity, tolerance_kg, lat, lng)
+    else:
+        result = cloudinary_call(check_scale, read_image(image), fps_id, expected_kg, commodity, tolerance_kg, lat, lng)
     result.pop("_raw", None)
     return result
 

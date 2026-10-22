@@ -199,7 +199,8 @@ def notice_lines(shop, lang):
 def build_notice(fps_id, language="te", photo_public_id=None, timings=None):
     if language not in LANGS:
         raise ValueError(f"language must be one of {list(LANGS)}")
-    if photo_public_id and not photo_public_id.startswith(f"rationseva/stock_arrival/{fps_id}/"):
+    if photo_public_id and not photo_public_id.startswith((f"rationseva/stock_arrival/{fps_id}/",
+                                                           f"rationseva/incoming/stock_arrival/{fps_id}/")):
         # only this shop's stock photos - never a private doorstep/complaint original
         raise ValueError("photo_public_id must be a stock_arrival photo of this FPS")
     ensure_assets()

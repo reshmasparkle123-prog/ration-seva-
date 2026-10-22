@@ -18,7 +18,7 @@ import argparse
 import json
 import re
 
-from cloudinary_proof import configure, upload_proof
+from cloudinary_proof import configure, proof_from_incoming, upload_proof
 
 NUM_RE = re.compile(r"(\d{1,3}(?:[.,]\d{1,3})?)\s*(kg|kgs|g|gm|gms)?\b", re.I)
 
@@ -79,6 +79,17 @@ def check_scale(image, fps_id, expected_kg, commodity=None, tolerance_kg=0.1, la
     proof = upload_proof(image, fps_id, "weighing", lat, lng,
                          note=f"{commodity or 'ration'} expected {expected_kg} kg",
                          ocr="adv_ocr")
+    return scale_verdict(proof, expected_kg, commodity, tolerance_kg)
+
+
+def check_scale_incoming(public_id, fps_id, expected_kg, commodity=None, tolerance_kg=0.1, lat=None, lng=None):
+    """Same as check_scale, for a photo already uploaded with the signed Upload Widget."""
+    proof = proof_from_incoming(public_id, fps_id, "weighing", lat, lng,
+                                note=f"{commodity or 'ration'} expected {expected_kg} kg")
+    return scale_verdict(proof, expected_kg, commodity, tolerance_kg)
+
+
+def scale_verdict(proof, expected_kg, commodity, tolerance_kg):
     raw = proof.pop("_raw")
     text, status = ocr_text(raw)
     reading, matched = pick_weight_kg(text)

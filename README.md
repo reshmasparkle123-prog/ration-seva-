@@ -20,11 +20,68 @@ The React Compiler is not enabled on this template because of its impact on dev 
 | Endpoint | Body (multipart/form-data) | Returns |
 |---|---|---|
 | `GET /health` | - | `{"status": "ok"}` |
-| `POST /proof` | `image`, `fps_id`, `event` (`stock_arrival` \| `doorstep_delivery` \| `weighing` \| `complaint`), optional `lat`, `lng`, `note` | stamped / thumbnail URLs. For `doorstep_delivery` and `complaint`, `original_url` (unblurred) is **not** returned |
-| `POST /scale-check` | `image`, `fps_id`, `expected_kg`, optional `commodity`, `tolerance_kg` (default 0.1), `lat`, `lng` | OCR reading + `verdict` (`OK` \| `SHORT_WEIGHT` \| `NEEDS_REVIEW` \| `UNREADABLE` \| `OCR_UNAVAILABLE`) |
+| `GET /upload-signature` | query: `event`, `fps_id` (must exist in `summary.json`) | signed params for the Cloudinary Upload Widget (see below). Never includes the API secret |
+| `POST /proof` | `image` **or** `public_id`, `fps_id`, `event` (`stock_arrival` \| `doorstep_delivery` \| `weighing` \| `complaint`), optional `lat`, `lng`, `note` | stamped / thumbnail URLs. For `doorstep_delivery` and `complaint`, `original_url` (unblurred) is **not** returned |
+| `POST /scale-check` | `image` **or** `public_id`, `fps_id`, `expected_kg`, optional `commodity`, `tolerance_kg` (default 0.1), `lat`, `lng` | OCR reading + `verdict` (`OK` \| `SHORT_WEIGHT` \| `NEEDS_REVIEW` \| `UNREADABLE` \| `OCR_UNAVAILABLE`) |
 | `POST /notice` | `fps_id`, optional `language` (`te` default \| `hi` \| `en`), `photo_public_id` (a `stock_arrival` photo of that FPS, used as darkened background), `timings` (e.g. `9 AM - 1 PM`) | signed 1080x1080 WhatsApp notice `url` listing AVAILABLE / LOW stock from `summary.json` |
 
 Uploads must be real images (checked by file signature) and at most 10 MB. Otherwise the API returns 415 or 413.
+
+### Upload straight from the browser (signed Upload Widget)
+
+Instead of posting the file to us, the app can upload directly to Cloudinary with the Upload Widget and then send only the `public_id`:
+
+1. `GET /upload-signature?event=...&fps_id=...` returns `signature`, `timestamp`, `api_key`, `cloud_name`, `folder` (`rationseva/incoming/<event>/<fps_id>`), `type` (`authenticated` for `doorstep_delivery` / `complaint`, else `upload`), `tags`, `source` and, for `weighing`, `ocr: "adv_ocr"`. Only these server-chosen params are signed, so a client that changes the folder or type gets its upload rejected by Cloudinary (401 Invalid Signature).
+2. Open the widget with those params.
+3. Send the `public_id` from the widget's `success` result to `POST /proof` or `POST /scale-check` (form fields, no `image`). The API only accepts ids directly under `rationseva/incoming/<event>/<fps_id>/` (400 for anything else, such as another shop's photo or a private original), fetches the asset with the Admin API (including its OCR result for weighing), and returns the same response as a file upload. `captured_at` is server time at processing; Cloudinary's upload time is returned as `uploaded_at`.
+
+```jsx
+// index.html: <script src="https://upload-widget.cloudinary.com/latest/global/all.js"></script>
+const API = import.meta.env.VITE_API_URL;
+
+export function ProofButton({ fpsId, event, onDone }) {
+  async function open() {
+    const sig = await fetch(`${API}/upload-signature?event=${event}&fps_id=${fpsId}`).then(r => r.json());
+    const widget = window.cloudinary.createUploadWidget(
+      {
+        cloudName: sig.cloud_name,
+        apiKey: sig.api_key,
+        uploadSignatureTimestamp: sig.timestamp,
+        // the widget asks us to sign what it will send; it adds custom_coordinates when the user crops
+        uploadSignature: async (cb, paramsToSign) => {
+          if (!paramsToSign.custom_coordinates) return cb(sig.signature);
+          const q = new URLSearchParams({ event, fps_id: fpsId, timestamp: sig.timestamp,
+                                          custom_coordinates: paramsToSign.custom_coordinates });
+          cb((await fetch(`${API}/upload-signature?${q}`).then(r => r.json())).signature);
+        },
+        folder: sig.folder,
+        type: sig.type,
+        tags: sig.tags,
+        ...(sig.ocr && { ocr: sig.ocr }),
+        sources: ["camera", "local"],
+        multiple: false,
+        cropping: true,
+        maxFileSize: 10 * 1024 * 1024,
+        clientAllowedFormats: ["jpg", "jpeg", "png", "webp", "heic"],
+      },
+      async (error, result) => {
+        if (error || result.event !== "success") return;
+        const body = new FormData();
+        body.append("public_id", result.info.public_id);
+        body.append("fps_id", fpsId);
+        body.append("event", event);
+        // for /scale-check instead: body.append("expected_kg", 35) and drop "event"
+        const proof = await fetch(`${API}/proof`, { method: "POST", body }).then(r => r.json());
+        onDone(proof);
+      }
+    );
+    widget.open();
+  }
+  return <button onClick={open}>Upload photo</button>;
+}
+```
+
+Cloudinary accepts a signature for up to an hour, and the crop re-sign only accepts a `timestamp` within 10 minutes of server time, so fetch the signature when the user taps the button, not at page load.
 
 ### Run locally
 

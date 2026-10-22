@@ -29,11 +29,15 @@ Usage:
 import argparse
 import json
 import os
+import re
+import time
 from datetime import datetime, timedelta, timezone
 
 import cloudinary
+import cloudinary.api
+import cloudinary.exceptions
 import cloudinary.uploader
-from cloudinary.utils import cloudinary_url
+from cloudinary.utils import api_sign_request, cloudinary_url
 from dotenv import load_dotenv
 
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -115,13 +119,6 @@ def upload_proof(image, fps_id, event, lat=None, lng=None, note=None, blur="auto
     if blur == "auto":
         blur = DEFAULT_BLUR[event]
     captured_at = datetime.now(IST)
-    stamp = captured_at.strftime("%Y%m%d_%H%M%S")
-
-    context = {"fps_id": fps_id, "event": event, "captured_at": captured_at.isoformat()}
-    if lat is not None and lng is not None:
-        context.update({"lat": str(lat), "lng": str(lng)})
-    if note:
-        context["note"] = note
 
     # Photos that need blurring hold personal info -> store them PRIVATE ("authenticated"):
     # the unblurred original can't be opened by guessing the URL, only via signed links.
@@ -130,14 +127,27 @@ def upload_proof(image, fps_id, event, lat=None, lng=None, note=None, blur="auto
     res = cloudinary.uploader.upload(
         image,
         folder=f"rationseva/{event}/{fps_id}",
-        public_id=stamp,
+        public_id=captured_at.strftime("%Y%m%d_%H%M%S"),
         tags=["rationseva", event, f"fps_{fps_id}"],
-        context=context,
+        context=proof_context(fps_id, event, captured_at, lat, lng, note),
         resource_type="image",
         type=delivery,
         **upload_extra,
     )
+    return proof_result(res, fps_id, event, captured_at, lat, lng, blur, delivery)
 
+
+def proof_context(fps_id, event, captured_at, lat=None, lng=None, note=None):
+    context = {"fps_id": fps_id, "event": event, "captured_at": captured_at.isoformat()}
+    if lat is not None and lng is not None:
+        context.update({"lat": str(lat), "lng": str(lng)})
+    if note:
+        context["note"] = note
+    return context
+
+
+def proof_result(res, fps_id, event, captured_at, lat, lng, blur, delivery):
+    """Stamped / thumb / original URLs for an asset already in Cloudinary (res = upload or Admin API response)."""
     pid = res["public_id"]
     # sign_url=True: required for add-on effects (OCR text blur), and stops anyone
     # from editing the URL to strip the blur or the stamp.
@@ -165,6 +175,93 @@ def upload_proof(image, fps_id, event, lat=None, lng=None, note=None, blur="auto
         "bytes": res.get("bytes"),
         "_raw": res,   # full Cloudinary response (used by the scale reader); dropped when printing
     }
+
+
+# ---------------------------------------------------------------------------
+# Signed Upload Widget: the browser uploads straight to Cloudinary into
+# rationseva/incoming/<event>/<fps_id>, then hands us the public_id.
+# ---------------------------------------------------------------------------
+
+INCOMING_ROOT = "rationseva/incoming"
+FPS_RE = re.compile(r"[0-9A-Za-z]{1,20}")
+COORDS_RE = re.compile(r"\d{1,5},\d{1,5},\d{1,5},\d{1,5}")
+SIGNATURE_MAX_SKEW = 600   # seconds; Cloudinary itself rejects signatures older than 1 hour
+
+
+def incoming_folder(event, fps_id):
+    if event not in EVENTS:
+        raise ValueError(f"event must be one of {list(EVENTS)}")
+    if not FPS_RE.fullmatch(fps_id or ""):
+        raise ValueError("fps_id must be 1-20 letters/digits")
+    return f"{INCOMING_ROOT}/{event}/{fps_id}"
+
+
+def default_delivery(event):
+    """Same rule as upload_proof with blur='auto': anything that gets blurred is stored private."""
+    return "authenticated" if DEFAULT_BLUR[event] != "none" else "upload"
+
+
+def sign_upload(event, fps_id, timestamp=None, custom_coordinates=None):
+    """
+    Signature for a widget upload. Only server-chosen params are signed, so a client that
+    changes folder / type / tags / ocr gets its upload rejected by Cloudinary.
+    timestamp / custom_coordinates only let us re-sign what the widget itself adds (see README).
+    """
+    now = int(time.time())
+    if timestamp is None:
+        timestamp = now
+    elif abs(int(timestamp) - now) > SIGNATURE_MAX_SKEW:
+        raise ValueError("timestamp too far from server time")
+    params = {
+        "timestamp": int(timestamp),
+        "folder": incoming_folder(event, fps_id),
+        "type": default_delivery(event),
+        "tags": f"rationseva,incoming,{event},fps_{fps_id}",
+        "source": "uw",   # the Upload Widget always adds and signs this
+    }
+    if event == "weighing":
+        params["ocr"] = "adv_ocr"
+    if os.getenv("CLOUDINARY_UPLOAD_PRESET"):
+        params["upload_preset"] = os.getenv("CLOUDINARY_UPLOAD_PRESET")
+    if custom_coordinates:
+        if not COORDS_RE.fullmatch(custom_coordinates):
+            raise ValueError("custom_coordinates must be x,y,w,h")
+        params["custom_coordinates"] = custom_coordinates
+    cfg = cloudinary.config()
+    return {
+        **params,
+        "tags": params["tags"].split(","),
+        "signature": api_sign_request(params, cfg.api_secret),
+        "api_key": cfg.api_key,
+        "cloud_name": cfg.cloud_name,
+    }
+
+
+def proof_from_incoming(public_id, fps_id, event, lat=None, lng=None, note=None):
+    """
+    Same result as upload_proof, for a photo the widget already uploaded.
+    captured_at = our server time now (not the phone's); uploaded_at = Cloudinary's created_at.
+    """
+    folder = incoming_folder(event, fps_id)
+    # exactly one segment after our folder: rejects other shops / events, private originals, '..'
+    if not re.fullmatch(re.escape(folder) + r"/[A-Za-z0-9_-]{1,100}", public_id or ""):
+        raise ValueError(f"public_id must be a widget upload under {folder}/")
+    delivery = default_delivery(event)
+    captured_at = datetime.now(IST)
+    extra = {}
+    try:
+        res = cloudinary.api.resource(public_id, type=delivery, resource_type="image")
+        if event == "weighing" and (res.get("info") or {}).get("ocr", {}).get("adv_ocr", {}).get("status") != "complete":
+            extra["ocr"] = "adv_ocr"   # no OCR result stored with the asset -> run it now
+        upd = cloudinary.api.update(public_id, type=delivery, resource_type="image",
+                                    context=proof_context(fps_id, event, captured_at, lat, lng, note), **extra)
+    except cloudinary.exceptions.NotFound as e:
+        raise LookupError("Uploaded photo not found") from e
+    if upd.get("info"):
+        res = {**res, "info": upd["info"]}
+    result = proof_result(res, fps_id, event, captured_at, lat, lng, DEFAULT_BLUR[event], delivery)
+    result["uploaded_at"] = res.get("created_at")
+    return result
 
 
 if __name__ == "__main__":
