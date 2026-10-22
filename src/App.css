@@ -393,3 +393,44 @@ footer {
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
+.stock-low {
+  background: #fff0ed;
+  color: #a33325;
+}
+
+.commodity .status {
+  align-self: flex-start;
+  line-height: 1.4;
+}
+
+.details-panel h3 {
+  margin-top: 24px;
+}
+
+.stock-low {
+  background: #fff0ed;
+  color: #a33325;
+}
+
+.commodity .status {
+  align-self: flex-start;
+  line-height: 1.4;
+}
+
+.details-panel h3 {
+  margin-top: 24px;
+}
+.stock-low {
+  background: #fff0ed;
+  color: #a33325;
+}
+
+.commodity .status {
+  align-self: flex-start;
+  line-height: 1.4;
+}
+
+.details-panel h3 {
+  margin-top: 24px;
+}
