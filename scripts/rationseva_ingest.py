@@ -127,6 +127,11 @@ def parse_table(rows, label_col):
                 header_idx = i
                 cols = {name: j for j, name in mapped.items() if name}
     if header_idx is None:
+        for row in rows:
+            names = {map_header(c) for c in row}
+            if label_col == "scheme" and "commodity" in names and "closing" in names:
+                raise ValueError("WRONG REPORT: file has the commodity-wise table, not the scheme "
+                                 "breakdown - re-download this file")
         raise ValueError("could not find header row")
 
     records = []
