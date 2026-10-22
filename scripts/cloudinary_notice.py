@@ -58,6 +58,10 @@ LANGS = {
             "Rice": "బియ్యం", "FRice": "ఫోర్టిఫైడ్ బియ్యం", "Sugar": "చక్కెర", "SUGAR HALF KG": "చక్కెర (అర కిలో)",
             "Redgram Dal": "కందిపప్పు", "Raagi": "రాగులు", "Jowar": "జొన్నలు",
             "Whole Wheat Atta": "గోధుమ పిండి", "Salt": "ఉప్పు", "Palmolein Oil": "పామాయిల్", "RagiPowder 1kg": "రాగి పిండి",
+            "RG Dal One kg Pkt": "కందిపప్పు (1 కిలో ప్యాకెట్)", "WM Atta Pkt": "గోధుమ పిండి (ప్యాకెట్)",
+            "Flood Dal": "వరద సహాయం - పప్పు", "Flood Poil": "వరద సహాయం - పామాయిల్",
+            "Flood Rice": "వరద సహాయం - బియ్యం", "Flood Sugar HK": "వరద సహాయం - చక్కెర (అర కిలో)",
+            "Flood Kit": "వరద సహాయం కిట్",
         },
     },
     "hi": {
@@ -70,6 +74,10 @@ LANGS = {
             "Rice": "चावल", "FRice": "फोर्टिफाइड चावल", "Sugar": "चीनी", "SUGAR HALF KG": "चीनी (आधा किलो)",
             "Redgram Dal": "अरहर दाल", "Raagi": "रागी", "Jowar": "ज्वार",
             "Whole Wheat Atta": "गेहूं आटा", "Salt": "नमक", "Palmolein Oil": "पामोलीन तेल", "RagiPowder 1kg": "रागी आटा",
+            "RG Dal One kg Pkt": "अरहर दाल (1 किलो पैकेट)", "WM Atta Pkt": "गेहूं आटा (पैकेट)",
+            "Flood Dal": "बाढ़ राहत - दाल", "Flood Poil": "बाढ़ राहत - पामोलीन तेल",
+            "Flood Rice": "बाढ़ राहत - चावल", "Flood Sugar HK": "बाढ़ राहत - चीनी (आधा किलो)",
+            "Flood Kit": "बाढ़ राहत किट",
         },
     },
     "en": {
@@ -78,7 +86,13 @@ LANGS = {
         "low": "Low stock - come soon",
         "timings": "Timings",
         "units": {"KG": "kg", "PKT": "packets", "LTR": "litres"},
-        "names": {"FRice": "Fortified Rice", "SUGAR HALF KG": "Sugar (half kg)"},
+        "names": {
+            "FRice": "Fortified Rice", "SUGAR HALF KG": "Sugar (half kg)",
+            "RG Dal One kg Pkt": "Red gram dal (1 kg pack)", "WM Atta Pkt": "Wheat atta (pack)",
+            "Flood Dal": "Flood relief - Dal", "Flood Poil": "Flood relief - Palm oil",
+            "Flood Rice": "Flood relief - Rice", "Flood Sugar HK": "Flood relief - Sugar (half kg)",
+            "Flood Kit": "Flood relief kit",
+        },
     },
 }
 
