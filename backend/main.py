@@ -2,7 +2,7 @@
 RationSeva - API backend
 ========================
 
-Thin FastAPI wrapper around scripts/cloudinary_proof.py and scripts/cloudinary_scale.py.
+Thin FastAPI wrapper around scripts/cloudinary_proof.py, cloudinary_scale.py and cloudinary_notice.py.
 All Cloudinary logic lives in those scripts; this file only handles HTTP, validation
 and stripping fields the frontend must never see.
 
@@ -25,6 +25,7 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))   # cloudinary_scale imports c
 
 from cloudinary_proof import configure, upload_proof  # noqa: E402
 from cloudinary_scale import check_scale              # noqa: E402
+from cloudinary_notice import build_notice            # noqa: E402
 
 # backend/.env first, then repo-root .env; configure() then falls back to scripts/.env.
 # Real environment variables (e.g. set on Render) always win - load_dotenv never overrides them.
@@ -76,10 +77,10 @@ def read_image(upload: UploadFile):
 def cloudinary_call(fn, *args, **kwargs):
     try:
         return fn(*args, **kwargs)
-    except HTTPException:
-        raise
+    except (HTTPException, ValueError, LookupError, FileNotFoundError):
+        raise                # bad input / missing data - the endpoint maps these to 4xx
     except Exception as e:  # cloudinary.exceptions.Error, network errors, ...
-        raise HTTPException(502, f"Cloudinary upload failed: {type(e).__name__}") from e
+        raise HTTPException(502, f"Cloudinary call failed: {type(e).__name__}") from e
 
 
 @asynccontextmanager
@@ -134,3 +135,20 @@ def scale_check(
     result = cloudinary_call(check_scale, read_image(image), fps_id, expected_kg, commodity, tolerance_kg, lat, lng)
     result.pop("_raw", None)
     return result
+
+
+@app.post("/notice")
+def notice(
+    fps_id: str = Form(...),
+    language: Literal["te", "hi", "en"] = Form("te"),
+    photo_public_id: Optional[str] = Form(None),
+    timings: Optional[str] = Form(None, max_length=40),
+):
+    try:
+        return cloudinary_call(build_notice, fps_id, language, photo_public_id or None, timings or None)
+    except ValueError as e:          # photo not a stock_arrival photo of this FPS
+        raise HTTPException(400, str(e)) from e
+    except LookupError as e:         # FPS not in summary.json / no AVAILABLE or LOW stock
+        raise HTTPException(404, str(e)) from e
+    except FileNotFoundError as e:   # ingest hasn't been run (don't leak the server path)
+        raise HTTPException(503, "Stock summary not available yet") from e
