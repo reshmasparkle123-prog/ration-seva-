@@ -25,3 +25,10 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+
+output/
+__pycache__/
+
+scripts/*.jpg
+scripts/*.png
