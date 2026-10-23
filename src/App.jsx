@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import asadSummaries from "./summary.json";
+import CloudinaryTools from "./CloudinaryTools.jsx";
 import "./App.css";
 
 const translations = {
@@ -463,6 +464,8 @@ export default function App() {
           </button>
         )}
       </section>
+
+      <CloudinaryTools />
 
       <section className="shop-section">
         <div className="section-heading">

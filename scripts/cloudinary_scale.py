@@ -2,16 +2,12 @@
 RationSeva - Weighing-scale photo reader (Cloudinary OCR)
 =========================================================
 
-Beneficiary photographs the weighing-scale display while collecting ration.
-Cloudinary's OCR add-on (Google Vision) reads the digits, we compare the
-reading with the entitlement, and if it's short we create complaint evidence:
-a stamped photo + the numbers.
+Beneficiaries photograph a weighing-scale display while collecting ration.
+Cloudinary OCR extracts text, and the result is compared with the expected
+weight. Ambiguous readings are sent for review rather than treated as
+confirmed shortages.
 
-Needs: Cloudinary "OCR Text Detection and Extraction" add-on (free plan).
-
-Usage:
-    python cloudinary_scale.py scale.jpg --fps 0306122 --expected-kg 35
-    python cloudinary_scale.py scale.jpg --fps 0306122 --expected-kg 35 --commodity Rice --tolerance-kg 0.1
+Needs: Cloudinary OCR add-on.
 """
 
 import argparse
@@ -20,82 +16,151 @@ import re
 
 from cloudinary_proof import configure, upload_proof
 
-NUM_RE = re.compile(r"(\d{1,3}(?:[.,]\d{1,3})?)\s*(kg|kgs|g|gm|gms)?\b", re.I)
+NUM_RE = re.compile(
+    r"(\d{1,3}(?:[.,]\d{1,3})?)\s*(kg|kgs|g|gm|gms)?\b",
+    re.I,
+)
 
 
 def ocr_text(cloudinary_response):
-    """Full text Google Vision found in the image ('' if nothing / add-on missing)."""
-    ocr = (cloudinary_response.get("info") or {}).get("ocr", {}).get("adv_ocr", {})
+    """Return OCR text and status."""
+    ocr = (
+        (cloudinary_response.get("info") or {})
+        .get("ocr", {})
+        .get("adv_ocr", {})
+    )
+
     if ocr.get("status") != "complete":
         return None, ocr.get("status", "not_requested")
+
     try:
         return ocr["data"][0]["textAnnotations"][0]["description"], "complete"
-    except (KeyError, IndexError):
+    except (KeyError, IndexError, TypeError):
         return "", "complete"
 
 
 def pick_weight_kg(text):
     """
-    Choose the most likely weight reading from OCR text.
-    Preference: number with 'kg' > number with a decimal point (scale displays: 4.985) > any number.
-    Returns (kg, raw_match) or (None, None).
+    Conservatively identify a possible scale reading.
+
+    Rejects lines that look like product descriptions or specifications.
+    Returns (weight_in_kg, matched_text) only when exactly one plausible
+    candidate remains. This is a heuristic, not proof that the image shows
+    a genuine live scale reading.
     """
     if not text:
         return None, None
+
     candidates = []
-    for m in NUM_RE.finditer(text):
-        raw, unit = m.group(1), (m.group(2) or "").lower()
-        value = float(raw.replace(",", "."))
-        if unit.startswith("g") and unit != "":
+
+    ignored_terms = re.compile(
+        r"\b(max|min|capacity|cap|model|serial|mercadolibre|amazon|"
+        r"price|product|kitchen scale|unit|resolution|division)\b",
+        re.I,
+    )
+
+    for line in text.splitlines():
+        line = line.strip()
+
+        if not line or ignored_terms.search(line):
+            continue
+
+        matches = list(NUM_RE.finditer(line))
+
+        # Do not guess when a line contains multiple numbers.
+        if len(matches) != 1:
+            continue
+
+        match = matches[0]
+        raw = match.group(1)
+        unit = (match.group(2) or "").lower()
+
+        # A decimal or explicit weight unit is required.
+        if "." not in raw and "," not in raw and not unit:
+            continue
+
+        try:
+            value = float(raw.replace(",", "."))
+        except ValueError:
+            continue
+
+        if unit in ("g", "gm", "gms"):
             value /= 1000.0
-        score = 0
-        if unit.startswith("kg"):
-            score += 3
-        elif unit.startswith("g"):
-            score += 2
-        if "." in raw or "," in raw:
-            score += 2
-        if 0 < value <= 100:          # ration loads are a few kg to ~50 kg
-            score += 1
-        # printed labels on the scale body, not the reading: "30kg max", "Min 100g", "e=5g", "Cap 30kg"
-        line_start = text.rfind("\n", 0, m.start()) + 1
-        line_end = text.find("\n", m.end())
-        line_end = len(text) if line_end == -1 else line_end
-        around = text[max(line_start, m.start() - 6):min(line_end, m.end() + 6)].lower()
-        if re.search(r"max|min|cap|e\s*=|d\s*=", around):
-            score -= 10
-        # part of a model/serial code like "DS-252" or "A12"
-        prev = text[m.start() - 1] if m.start() > 0 else " "
-        if prev.isalpha() or prev == "-":
-            score -= 5
-        candidates.append((score, value, m.group(0)))
-    if not candidates:
+
+        # Plausibility filter for ration weights.
+        if not 0 < value <= 100:
+            continue
+
+        candidates.append((round(value, 3), match.group(0).strip()))
+
+    # Ambiguous OCR results must not be treated as reliable measurements.
+    if len(candidates) != 1:
         return None, None
-    best = max(candidates, key=lambda c: c[0])
-    return round(best[1], 3), best[2].strip()
+
+    return candidates[0]
 
 
-def check_scale(image, fps_id, expected_kg, commodity=None, tolerance_kg=0.1, lat=None, lng=None):
-    proof = upload_proof(image, fps_id, "weighing", lat, lng,
-                         note=f"{commodity or 'ration'} expected {expected_kg} kg",
-                         ocr="adv_ocr")
-    raw = proof.pop("_raw")
+def check_scale(
+    image,
+    fps_id,
+    expected_kg,
+    commodity=None,
+    tolerance_kg=0.1,
+    lat=None,
+    lng=None,
+):
+    """Upload weighing evidence and compare a possible reading with entitlement."""
+    proof = upload_proof(
+        image,
+        fps_id,
+        "weighing",
+        lat,
+        lng,
+        note=f"{commodity or 'ration'} expected {expected_kg} kg",
+        ocr="adv_ocr",
+    )
+
+    raw = proof.pop("_raw", {})
     text, status = ocr_text(raw)
     reading, matched = pick_weight_kg(text)
 
     if status != "complete":
-        verdict, message = "OCR_UNAVAILABLE", f"OCR status: {status}. Is the OCR add-on enabled?"
+        verdict = "OCR_UNAVAILABLE"
+        message = (
+            f"OCR status: {status}. Check whether the Cloudinary OCR "
+            "add-on is enabled."
+        )
+
     elif reading is None:
-        verdict, message = "UNREADABLE", "Couldn't read the scale. Ask the user to retake the photo or type the weight."
+        verdict = "UNREADABLE"
+        message = (
+            "Couldn't identify one unambiguous weight reading. "
+            "Retake a clear photo of the scale display or enter the "
+            "reading manually for review."
+        )
+
     elif reading > expected_kg * 1.5 and reading > expected_kg + 2:
-        # way over entitlement -> more likely a misread / wrong photo than generous dealer
-        verdict, message = "NEEDS_REVIEW", (f"Reading {reading} kg is far above entitlement {expected_kg} kg - "
-                                            "possible misread or wrong photo. Please retake or enter weight manually.")
+        verdict = "NEEDS_REVIEW"
+        message = (
+            f"Possible reading {reading} kg is far above the expected "
+            f"{expected_kg} kg. Check the photo and reading manually."
+        )
+
     elif reading + tolerance_kg < expected_kg:
         short = expected_kg - reading
-        verdict, message = "SHORT_WEIGHT", f"Scale shows {reading} kg, entitled {expected_kg} kg -> short by {short:.2f} kg"
+        verdict = "SHORT_WEIGHT"
+        message = (
+            f"Possible reading {reading} kg is below the expected "
+            f"{expected_kg} kg by {short:.2f} kg. Human review is required."
+        )
+
     else:
-        verdict, message = "OK", f"Scale shows {reading} kg, entitled {expected_kg} kg"
+        verdict = "OK"
+        message = (
+            f"Possible reading {reading} kg is within the configured "
+            f"tolerance of the expected {expected_kg} kg. "
+            "Verify the photo before relying on this result."
+        )
 
     return {
         **proof,
@@ -106,21 +171,34 @@ def check_scale(image, fps_id, expected_kg, commodity=None, tolerance_kg=0.1, la
         "ocr_text": text,
         "verdict": verdict,
         "message": message,
-        "auto_complaint": verdict == "SHORT_WEIGHT",
+        "auto_complaint": False,
     }
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(description="Read a weighing-scale photo and check for short weight")
-    ap.add_argument("image")
-    ap.add_argument("--fps", required=True)
-    ap.add_argument("--expected-kg", type=float, required=True)
-    ap.add_argument("--commodity")
-    ap.add_argument("--tolerance-kg", type=float, default=0.1)
-    ap.add_argument("--lat", type=float)
-    ap.add_argument("--lng", type=float)
-    args = ap.parse_args()
+    parser = argparse.ArgumentParser(
+        description="Read a weighing-scale photo and flag possible discrepancies"
+    )
+    parser.add_argument("image")
+    parser.add_argument("--fps", required=True)
+    parser.add_argument("--expected-kg", type=float, required=True)
+    parser.add_argument("--commodity")
+    parser.add_argument("--tolerance-kg", type=float, default=0.1)
+    parser.add_argument("--lat", type=float)
+    parser.add_argument("--lng", type=float)
+
+    args = parser.parse_args()
 
     configure()
-    print(json.dumps(check_scale(args.image, args.fps, args.expected_kg, args.commodity,
-                                 args.tolerance_kg, args.lat, args.lng), indent=2, ensure_ascii=False))
+
+    result = check_scale(
+        args.image,
+        args.fps,
+        args.expected_kg,
+        args.commodity,
+        args.tolerance_kg,
+        args.lat,
+        args.lng,
+    )
+
+    print(json.dumps(result, indent=2, ensure_ascii=False))
