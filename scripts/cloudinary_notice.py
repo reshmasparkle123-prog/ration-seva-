@@ -219,6 +219,9 @@ def build_notice(fps_id, language="te", photo_public_id=None, timings=None):
         # only this shop's stock photos - never a private doorstep/complaint original
         raise ValueError("photo_public_id must be a stock_arrival photo of this FPS")
     ensure_assets()
+    if photo_public_id and not _exists(photo_public_id, type="upload", resource_type="image"):
+        # otherwise we'd hand back a signed URL that 404s at Cloudinary
+        raise LookupError(f"Stock photo not found: {photo_public_id}")
     shop = load_shop(fps_id)
     items = notice_lines(shop, language)
     if not items:
