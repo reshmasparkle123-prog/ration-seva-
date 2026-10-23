@@ -96,6 +96,7 @@ origins += [o.strip() for o in os.getenv("FRONTEND_ORIGIN", "").split(",") if o.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_origin_regex=r"http://(localhost|127\.0\.0\.1):\d+",   # any local dev port
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
