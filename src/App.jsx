@@ -1,153 +1,298 @@
 
-import { useEffect, useState } from "react";
-import { supabase } from "./supabaseClient";
+import { useState } from "react";
+import asadSummaries from "./summary.json";
+import CloudinaryTools from "./CloudinaryTools.jsx";
 import "./App.css";
 
 const translations = {
   en: {
     tagline: "Know before you go",
     description: "Check reported ration stock before visiting a shop.",
-    search: "Search by shop name, ID or location...",
+    search: "Search by shop ID, commodity or district...",
+    clearSearch: "Clear search",
     directory: "RATION DIRECTORY",
     nearby: "Ration shops",
     shop: "shops",
-    reported: "Government-reported stock",
-    updated: "Last updated",
     available: "Reported stock available",
+    noStock: "NO REPORTED STOCK",
     warning: "Physical availability is not verified.",
-    details: "View shop details",
-    sample: "DEMO DATA — NOT LIVE GOVERNMENT DATA",
+    details: "View all stock details",
     rice: "Rice",
     wheat: "Wheat",
-    kg: "kg",
     noResults: "No matching shops found.",
     detailHeading: "SHOP DETAILS",
     close: "Close",
     confirm: "Please confirm with the shop before visiting.",
     footer: "Ration Seva · Transparency for every beneficiary",
-    location: "Sample location",
-    fresh: "Recently updated (demo)",
-    stale: "Update may be outdated",
-    freshnessUnknown: "Update date unavailable",
+    fresh: "Recently reported",
+    stale: "Report may be outdated",
+    freshnessUnknown: "Report date unavailable",
     freshnessNote:
       "Freshness is based on the report date, not physical stock verification.",
+    source: "Source",
+    district: "District",
+    afso: "AFSO",
+    dataTime: "Data time",
+    low: "LOW STOCK",
+    fractional: "CHECK DATA",
+    flags: "Data warnings",
+    noFlags: "No warnings in this summary.",
+    notLive: "Historical public report · Not live",
+    stockSummary: "Nonzero reported balances",
+    allCommodities: "All reported commodities",
+    sourceNotice:
+      "Reported quantities are not confirmation of physical stock at the shop.",
+    dataCount: "Loaded shop summaries",
+    dataError: "The shop dataset could not be read. Check src/summary.json.",
+    reportDate: "Report date",
   },
+
   kn: {
     tagline: "ಹೋಗುವ ಮೊದಲು ತಿಳಿಯಿರಿ",
     description: "ಅಂಗಡಿಗೆ ಹೋಗುವ ಮೊದಲು ವರದಿಯಾದ ಪಡಿತರ ದಾಸ್ತಾನು ಪರಿಶೀಲಿಸಿ.",
-    search: "ಅಂಗಡಿ ಹೆಸರು, ID ಅಥವಾ ಸ್ಥಳದ ಮೂಲಕ ಹುಡುಕಿ...",
+    search: "ಅಂಗಡಿ ID, ವಸ್ತು ಅಥವಾ ಜಿಲ್ಲೆ ಮೂಲಕ ಹುಡುಕಿ...",
+    clearSearch: "ಹುಡುಕಾಟ ತೆರವುಗೊಳಿಸಿ",
     directory: "ಪಡಿತರ ಅಂಗಡಿಗಳ ಪಟ್ಟಿ",
     nearby: "ಪಡಿತರ ಅಂಗಡಿಗಳು",
     shop: "ಅಂಗಡಿಗಳು",
-    reported: "ಸರ್ಕಾರ ವರದಿ ಮಾಡಿದ ದಾಸ್ತಾನು",
-    updated: "ಕೊನೆಯ ನವೀಕರಣ",
-    available: "ವರದಿಯ ಪ್ರಕಾರ ದಾಸ್ತಾನು ಲಭ್ಯವಿದೆ",
-    warning: "ಭೌತಿಕ ಲಭ್ಯತೆಯನ್ನು ಪರಿಶೀಲಿಸಲಾಗಿಲ್ಲ.",
-    details: "ಅಂಗಡಿ ವಿವರಗಳು",
-    sample: "ಡೆಮೋ ಡೇಟಾ — ನೈಜ ಸರ್ಕಾರಿ ಡೇಟಾ ಅಲ್ಲ",
-    rice: "ಅಕ್ಕಿ",
-    wheat: "ಗೋಧಿ",
-    kg: "ಕೆಜಿ",
+    available: "ವರದಿಯಲ್ಲಿ ದಾಸ್ತಾನು ಲಭ್ಯವಿದೆ",
+    noStock: "ದಾಸ್ತಾನು ವರದಿಯಾಗಿಲ್ಲ",
+    warning: "ನೈಜ ದಾಸ್ತಾನು ಪರಿಶೀಲಿಸಲಾಗಿಲ್ಲ.",
+    details: "ಎಲ್ಲಾ ದಾಸ್ತಾನು ವಿವರಗಳು",
     noResults: "ಹೊಂದಾಣಿಕೆಯ ಅಂಗಡಿಗಳು ಕಂಡುಬಂದಿಲ್ಲ.",
     detailHeading: "ಅಂಗಡಿ ವಿವರಗಳು",
     close: "ಮುಚ್ಚಿ",
-    confirm: "ಹೋಗುವ ಮೊದಲು ಅಂಗಡಿಯೊಂದಿಗೆ ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.",
-    footer: "ರೇಷನ್ ಸೇವಾ · ಪ್ರತಿಯೊಬ್ಬ ಫಲಾನುಭವಿಗೂ ಪಾರದರ್ಶಕತೆ",
-    location: "ಮಾದರಿ ಸ್ಥಳ",
-    fresh: "ಇತ್ತೀಚೆಗೆ ನವೀಕರಿಸಲಾಗಿದೆ (ಡೆಮೋ)",
-    stale: "ನವೀಕರಣ ಹಳೆಯದಾಗಿರಬಹುದು",
-    freshnessUnknown: "ನವೀಕರಣದ ದಿನಾಂಕ ಲಭ್ಯವಿಲ್ಲ",
+    fresh: "ಇತ್ತೀಚಿನ ವರದಿ",
+    stale: "ವರದಿ ಹಳೆಯದಾಗಿರಬಹುದು",
+    freshnessUnknown: "ವರದಿ ದಿನಾಂಕ ಲಭ್ಯವಿಲ್ಲ",
     freshnessNote:
-      "ಇದು ವರದಿಯ ದಿನಾಂಕವನ್ನು ಆಧರಿಸಿದೆ; ನೈಜ ದಾಸ್ತಾನು ಪರಿಶೀಲನೆಯಲ್ಲ.",
+      "ಇದು ವರದಿ ದಿನಾಂಕವನ್ನು ಆಧರಿಸಿದೆ; ನೈಜ ದಾಸ್ತಾನು ಪರಿಶೀಲನೆಯಲ್ಲ.",
+    source: "ಮೂಲ",
+    district: "ಜಿಲ್ಲೆ",
+    afso: "AFSO",
+    dataTime: "ಡೇಟಾ ಸಮಯ",
+    low: "ಕಡಿಮೆ ದಾಸ್ತಾನು",
+    fractional: "ಡೇಟಾ ಪರಿಶೀಲಿಸಿ",
+    flags: "ಡೇಟಾ ಎಚ್ಚರಿಕೆಗಳು",
+    noFlags: "ಈ ಸಾರಾಂಶದಲ್ಲಿ ಎಚ್ಚರಿಕೆಗಳಿಲ್ಲ.",
+    notLive: "ಹಿಂದಿನ ಸಾರ್ವಜನಿಕ ವರದಿ · ನೈಜ ಸಮಯದ ಡೇಟಾ ಅಲ್ಲ",
+    stockSummary: "ಶೂನ್ಯಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ವರದಿಯಾದ ದಾಸ್ತಾನು",
+    allCommodities: "ಎಲ್ಲಾ ವರದಿಯಾದ ವಸ್ತುಗಳು",
+    sourceNotice: "ವರದಿಯಾದ ಪ್ರಮಾಣವು ಅಂಗಡಿಯ ನೈಜ ದಾಸ್ತಾನು ದೃಢೀಕರಣವಲ್ಲ.",
+    clearSearch: "ಹುಡುಕಾಟ ತೆರವುಗೊಳಿಸಿ",
+    confirm: "ಭೇಟಿ ನೀಡುವ ಮೊದಲು ಅಂಗಡಿಯಲ್ಲಿ ದೃಢಪಡಿಸಿ.",
+    footer: "ರೇಷನ್ ಸೇವಾ · ಪ್ರತಿಯೊಬ್ಬ ಫಲಾನುಭವಿಗೂ ಪಾರದರ್ಶಕತೆ",
+    reportDate: "ವರದಿ ದಿನಾಂಕ",
+    dataError: "ಡೇಟಾಸೆಟ್ ಓದಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. src/summary.json ಪರಿಶೀಲಿಸಿ.",
   },
+
   hi: {
     tagline: "जाने से पहले जानें",
     description: "दुकान जाने से पहले रिपोर्ट किया गया राशन स्टॉक देखें।",
-    search: "दुकान के नाम, ID या स्थान से खोजें...",
+    search: "दुकान ID, वस्तु या जिले से खोजें...",
+    clearSearch: "खोज साफ़ करें",
     directory: "राशन दुकान सूची",
     nearby: "राशन की दुकानें",
     shop: "दुकानें",
-    reported: "सरकार द्वारा रिपोर्ट किया गया स्टॉक",
-    updated: "अंतिम अपडेट",
-    available: "रिपोर्ट के अनुसार स्टॉक उपलब्ध है",
-    warning: "वास्तविक उपलब्धता सत्यापित नहीं है।",
-    details: "दुकान का विवरण देखें",
-    sample: "डेमो डेटा — लाइव सरकारी डेटा नहीं",
-    rice: "चावल",
-    wheat: "गेहूँ",
-    kg: "किग्रा",
+    available: "रिपोर्ट में स्टॉक उपलब्ध",
+    noStock: "स्टॉक रिपोर्ट नहीं किया गया",
+    warning: "वास्तविक स्टॉक सत्यापित नहीं है।",
+    details: "स्टॉक का पूरा विवरण",
     noResults: "कोई मेल खाती दुकान नहीं मिली।",
     detailHeading: "दुकान का विवरण",
     close: "बंद करें",
-    confirm: "जाने से पहले दुकान से पुष्टि करें।",
-    footer: "राशन सेवा · हर लाभार्थी के लिए पारदर्शिता",
-    location: "नमूना स्थान",
-    fresh: "हाल ही में अपडेट किया गया (डेमो)",
-    stale: "अपडेट पुराना हो सकता है",
-    freshnessUnknown: "अपडेट की तारीख उपलब्ध नहीं है",
+    fresh: "हाल की रिपोर्ट",
+    stale: "रिपोर्ट पुरानी हो सकती है",
+    freshnessUnknown: "रिपोर्ट की तारीख उपलब्ध नहीं है",
     freshnessNote:
       "यह रिपोर्ट की तारीख पर आधारित है, वास्तविक स्टॉक सत्यापन पर नहीं।",
+    source: "स्रोत",
+    district: "जिला",
+    afso: "AFSO",
+    dataTime: "डेटा का समय",
+    low: "कम स्टॉक",
+    fractional: "डेटा जाँचें",
+    flags: "डेटा चेतावनियाँ",
+    noFlags: "इस सारांश में कोई चेतावनी नहीं है।",
+    notLive: "पुरानी सार्वजनिक रिपोर्ट · लाइव नहीं",
+    stockSummary: "शून्य से अधिक रिपोर्ट किया गया स्टॉक",
+    allCommodities: "सभी रिपोर्ट की गई वस्तुएँ",
+    sourceNotice:
+      "रिपोर्ट की गई मात्रा दुकान के वास्तविक स्टॉक की पुष्टि नहीं है।",
+    clearSearch: "खोज साफ़ करें",
+    confirm: "जाने से पहले दुकान से पुष्टि करें।",
+    footer: "राशन सेवा · हर लाभार्थी के लिए पारदर्शिता",
+    reportDate: "रिपोर्ट की तारीख",
+    dataError: "डेटासेट नहीं पढ़ा जा सका। src/summary.json जाँचें।",
   },
 };
 
-const shops = [
-  {
-    id: "DEMO-001",
-    name: "Demo Ration Shop 001",
-    area: "Sample location",
-    rice: 250,
-    wheat: 80,
-    updated: "20 Oct 2026",
-  },
-  {
-    id: "DEMO-002",
-    name: "Demo Ration Shop 002",
-    area: "Sample location",
-    rice: 120,
-    wheat: 45,
-    updated: "19 Oct 2026",
-  },
-];
+// The directory dataset is imported directly from src/summary.json.
+// It contains historical public-report summaries, not live-verified stock.
+const reports = Array.isArray(asadSummaries)
+  ? asadSummaries
+  : Array.isArray(asadSummaries?.reports)
+    ? asadSummaries.reports
+    : [];
 
-function getFreshness(updated, t) {
-  if (!updated) {
+function isPackaging(item) {
+  const name = String(item?.commodity || "").trim().toUpperCase();
+
+  return (
+    name.includes("PACKAGING") ||
+    /\b\d+\s*KG\s*BAG\b/.test(name) ||
+    /\bGUNNY\b/.test(name)
+  );
+}
+
+function getFreshness(reportDate, t) {
+  if (!reportDate) {
     return {
       label: t.freshnessUnknown,
       className: "freshness-unknown",
     };
   }
 
-  const date = new Date(`${updated} 00:00:00`);
+  const parts = String(reportDate).split("-").map(Number);
 
-  if (Number.isNaN(date.getTime())) {
+  if (parts.length !== 3 || parts.some(Number.isNaN)) {
     return {
       label: t.freshnessUnknown,
       className: "freshness-unknown",
     };
   }
 
+  const [year, month, day] = parts;
+  const report = new Date(year, month - 1, day);
   const today = new Date();
+
+  if (
+    report.getFullYear() !== year ||
+    report.getMonth() !== month - 1 ||
+    report.getDate() !== day
+  ) {
+    return {
+      label: t.freshnessUnknown,
+      className: "freshness-unknown",
+    };
+  }
+
+  report.setHours(0, 0, 0, 0);
   today.setHours(0, 0, 0, 0);
 
   const ageInDays = Math.floor(
-    (today.getTime() - date.getTime()) / (1000 * 60 * 60 * 24)
+    (today.getTime() - report.getTime()) / 86400000
   );
 
   if (ageInDays >= 0 && ageInDays <= 1) {
-    return {
-      label: t.fresh,
-      className: "freshness-fresh",
-    };
+    return { label: t.fresh, className: "freshness-fresh" };
   }
 
-  return {
-    label: t.stale,
-    className: "freshness-stale",
-  };
+  return { label: t.stale, className: "freshness-stale" };
 }
 
-function StockFreshness({ shop, t }) {
-  const freshness = getFreshness(shop.updated, t);
+function formatReportDate(date) {
+  if (!date) return "—";
+
+  const parsed = new Date(`${date}T00:00:00`);
+
+  if (Number.isNaN(parsed.getTime())) return date;
+
+  return parsed.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+}
+
+function getCommodityStatus(item) {
+  const closing = Number(item?.closing ?? 0);
+  const existingStatus = String(item?.status || "").toUpperCase();
+
+  if (closing <= 0) return "OUT_OF_STOCK";
+
+  // Preserve dataset flags and use a clearly labelled prototype rule for FRice.
+  if (existingStatus === "LOW") return "LOW";
+
+  if (
+    String(item?.commodity || "").trim().toLowerCase() === "frice" &&
+    closing <= 10
+  ) {
+    return "LOW";
+  }
+
+  return "AVAILABLE";
+}
+
+function getSafeFlags(report) {
+  return (Array.isArray(report?.flags) ? report.flags : []).map((flag) => {
+    const flagType = String(flag?.flag || "").toUpperCase();
+
+    // Avoid presenting an unverified percentage calculation as authoritative.
+    if (flagType === "LOW_STOCK") {
+      const item = (report.commodities || []).find(
+        (commodity) =>
+          String(commodity.commodity).toLowerCase() ===
+          String(flag.commodity).toLowerCase()
+      );
+
+      const closing = Number(item?.closing);
+
+      return {
+        ...flag,
+        message: Number.isFinite(closing)
+          ? `Reported closing balance: ${closing.toLocaleString("en-IN")} ${item?.unit || ""}. This is a prototype low-stock warning, not an official threshold.`
+          : "A low-stock warning appears in the source summary. Verify the reported quantity before relying on it.",
+      };
+    }
+
+    if (flagType === "FRACTIONAL_PACKETS") {
+      return {
+        ...flag,
+        message:
+          "The reported quantity is not a whole number. Verify the source unit and quantity before interpreting it as a packet count.",
+      };
+    }
+
+    return flag;
+  });
+}
+
+function CommodityCard({ item, t }) {
+  const closing = Number(item?.closing ?? 0);
+  const status = getCommodityStatus(item);
+
+  const statusLabel =
+    status === "LOW"
+      ? t.low
+      : status === "OUT_OF_STOCK"
+        ? t.noStock
+        : t.available;
+
+  return (
+    <div className="commodity">
+      <span>{item?.commodity || "Unknown commodity"}</span>
+
+      <strong>
+        {Number.isFinite(closing)
+          ? closing.toLocaleString("en-IN")
+          : "—"}{" "}
+        {item?.unit || ""}
+      </strong>
+
+      <span
+        className={`status ${
+          status === "LOW" || status === "OUT_OF_STOCK" ? "stock-low" : ""
+        }`}
+      >
+        {statusLabel}
+      </span>
+    </div>
+  );
+}
+
+function StockFreshness({ reportDate, t }) {
+  const freshness = getFreshness(reportDate, t);
 
   return (
     <div className={`freshness ${freshness.className}`}>
@@ -157,50 +302,113 @@ function StockFreshness({ shop, t }) {
   );
 }
 
+function ShopDetails({ report, onClose, t }) {
+  const commodities = Array.isArray(report?.commodities)
+    ? report.commodities.filter((item) => !isPackaging(item))
+    : [];
+
+  const flags = getSafeFlags(report);
+
+  return (
+    <section className="details-panel" aria-live="polite">
+      <div className="details-heading">
+        <div>
+          <p className="eyebrow">{t.detailHeading}</p>
+          <h2>FPS {report.fps_id}</h2>
+          <p className="shop-meta">
+            {report.district || "—"} · {t.afso}: {report.afso || "—"}
+          </p>
+        </div>
+
+        <button
+          type="button"
+          className="close-button"
+          onClick={onClose}
+        >
+          ✕ {t.close}
+        </button>
+      </div>
+
+      <p className="demo-notice">ⓘ {t.notLive}</p>
+      <p className="stock-label">{t.allCommodities}</p>
+
+      <div className="commodities">
+        {commodities.map((item, index) => (
+          <CommodityCard
+            key={`${item.commodity}-${index}`}
+            item={item}
+            t={t}
+          />
+        ))}
+      </div>
+
+      <h3>{t.flags}</h3>
+
+      {flags.length > 0 ? (
+        flags.map((flag, index) => (
+          <p
+            className="warning"
+            key={`${flag.flag}-${flag.commodity}-${index}`}
+          >
+            <strong>{flag.commodity}: </strong>
+            {flag.message}
+          </p>
+        ))
+      ) : (
+        <p>{t.noFlags}</p>
+      )}
+
+      <p className="updated">
+        {t.reportDate}: {formatReportDate(report.report_date)}
+      </p>
+
+      <p className="updated">
+        {t.dataTime}: {report.data_time || "—"}
+      </p>
+
+      <p className="updated">
+        {t.source}: {report.source || "Public stock report"}
+      </p>
+
+      <StockFreshness reportDate={report.report_date} t={t} />
+
+      <p className="freshness-note">{t.freshnessNote}</p>
+
+      <p className="warning">
+        ⓘ {t.warning} {t.confirm}
+      </p>
+    </section>
+  );
+}
+
 export default function App() {
   const [language, setLanguage] = useState("en");
   const [query, setQuery] = useState("");
   const [selectedShop, setSelectedShop] = useState(null);
 
-  // Connection test only. The demo shops remain unchanged.
-  useEffect(() => {
-    let cancelled = false;
-
-    async function testSupabase() {
-      const { data, error } = await supabase
-        .from("stock_reports")
-        .select("id")
-        .limit(5);
-
-      if (cancelled) return;
-
-      if (error) {
-        console.error("Supabase test failed:", error.message);
-        return;
-      }
-
-      console.log("Supabase connection successful!");
-      console.log("Stock reports:", data);
-    }
-
-    testSupabase().catch((error) => {
-      if (!cancelled) {
-        console.error("Supabase unexpected error:", error);
-      }
-    });
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+  const reports = asadSummaries;
 
   const t = translations[language];
 
-  const filteredShops = shops.filter((shop) =>
-    `${shop.name} ${shop.id} ${shop.area}`
-      .toLowerCase()
-      .includes(query.toLowerCase().trim())
-  );
+  const filteredReports = reports.filter((report) => {
+    const commodities = Array.isArray(report?.commodities)
+      ? report.commodities
+      : [];
+
+    const searchable = [
+      report?.fps_id,
+      report?.district,
+      report?.afso,
+      ...commodities
+        .filter((item) => !isPackaging(item))
+        .map((item) => item.commodity),
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+
+    return searchable.includes(query.trim().toLowerCase());
+  });
 
   return (
     <main className="app">
@@ -233,7 +441,7 @@ export default function App() {
       </header>
 
       <section className="hero">
-        <p className="eyebrow">PUBLIC DISTRIBUTION • PDS</p>
+        <p className="eyebrow">PUBLIC DISTRIBUTION · PDS</p>
         <h1>{t.tagline}</h1>
         <p className="hero-copy">{t.description}</p>
 
@@ -245,7 +453,19 @@ export default function App() {
           onChange={(event) => setQuery(event.target.value)}
           aria-label={t.search}
         />
+
+        {query.trim() !== "" && (
+          <button
+            type="button"
+            className="details-button"
+            onClick={() => setQuery("")}
+          >
+            {t.clearSearch}
+          </button>
+        )}
       </section>
+
+      <CloudinaryTools />
 
       <section className="shop-section">
         <div className="section-heading">
@@ -255,119 +475,92 @@ export default function App() {
           </div>
 
           <span className="shop-count">
-            {filteredShops.length} {t.shop}
+            {filteredReports.length} {t.shop}
           </span>
         </div>
 
-        <p className="demo-notice">ⓘ {t.sample}</p>
+        <p className="demo-notice">ⓘ {t.notLive}</p>
 
-        <div className="shop-grid">
-          {filteredShops.map((shop) => (
-            <article className="shop-card" key={shop.id}>
-              <div className="shop-card-top">
-                <span className="shop-icon">🏪</span>
-                <span className="status">{t.available}</span>
-              </div>
+        {reports.length === 0 ? (
+          <p className="warning">{t.dataError}</p>
+        ) : (
+          <div className="shop-grid">
+            {filteredReports.map((report, reportIndex) => {
+              const commodities = Array.isArray(report?.commodities)
+                ? report.commodities
+                : [];
 
-              <h3>{shop.name}</h3>
+              const nonzeroCommodities = commodities.filter(
+                (item) =>
+                  !isPackaging(item) && Number(item.closing) > 0
+              );
 
-              <p className="shop-meta">
-                {shop.id} · {t.location}
-              </p>
+              return (
+                <article
+                  className="shop-card"
+                  key={`${report.fps_id}-${report.report_date || reportIndex}`}
+                >
+                  <div className="shop-card-top">
+                    <span className="shop-icon">🏪</span>
+                  </div>
 
-              <p className="stock-label">{t.reported}</p>
+                  <h3>FPS {report.fps_id || "Unknown"}</h3>
 
-              <div className="commodities">
-                <div className="commodity">
-                  <span>🌾 {t.rice}</span>
-                  <strong>
-                    {shop.rice} {t.kg}
-                  </strong>
-                </div>
+                  <p className="shop-meta">
+                    {report.district || "—"} · {t.afso}: {report.afso || "—"}
+                  </p>
 
-                <div className="commodity">
-                  <span>🌾 {t.wheat}</span>
-                  <strong>
-                    {shop.wheat} {t.kg}
-                  </strong>
-                </div>
-              </div>
+                  <p className="stock-label">{t.stockSummary}</p>
 
-              <p className="updated">
-                {t.updated}: {shop.updated}
-              </p>
+                  {nonzeroCommodities.length > 0 ? (
+                    <div className="commodities">
+                      {nonzeroCommodities.map((item, index) => (
+                        <CommodityCard
+                          key={`${item.commodity}-${index}`}
+                          item={item}
+                          t={t}
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <p>{t.noStock}</p>
+                  )}
 
-              <StockFreshness shop={shop} t={t} />
+                  <p className="updated">
+                    {t.reportDate}: {formatReportDate(report.report_date)}
+                  </p>
 
-              <p className="warning">ⓘ {t.warning}</p>
+                  <StockFreshness
+                    reportDate={report.report_date}
+                    t={t}
+                  />
 
-              <button
-                className="details-button"
-                onClick={() => setSelectedShop(shop)}
-              >
-                {t.details} →
-              </button>
-            </article>
-          ))}
+                  <p className="warning">ⓘ {t.sourceNotice}</p>
 
-          {filteredShops.length === 0 && (
-            <p className="empty">{t.noResults}</p>
-          )}
-        </div>
+                  <button
+                    type="button"
+                    className="details-button"
+                    onClick={() => setSelectedShop(report)}
+                  >
+                    {t.details} →
+                  </button>
+                </article>
+              );
+            })}
+
+            {filteredReports.length === 0 && (
+              <p className="empty">{t.noResults}</p>
+            )}
+          </div>
+        )}
       </section>
 
       {selectedShop && (
-        <section className="details-panel" aria-live="polite">
-          <div className="details-heading">
-            <div>
-              <p className="eyebrow">{t.detailHeading}</p>
-              <h2>{selectedShop.name}</h2>
-
-              <p className="shop-meta">
-                {selectedShop.id} · {t.location}
-              </p>
-            </div>
-
-            <button
-              className="close-button"
-              onClick={() => setSelectedShop(null)}
-            >
-              ✕ {t.close}
-            </button>
-          </div>
-
-          <p className="stock-label">{t.reported}</p>
-
-          <div className="commodities">
-            <div className="commodity">
-              <span>🌾 {t.rice}</span>
-              <strong>
-                {selectedShop.rice} {t.kg}
-              </strong>
-            </div>
-
-            <div className="commodity">
-              <span>🌾 {t.wheat}</span>
-              <strong>
-                {selectedShop.wheat} {t.kg}
-              </strong>
-            </div>
-          </div>
-
-          <p className="updated">
-            {t.updated}: {selectedShop.updated}
-          </p>
-
-          <StockFreshness shop={selectedShop} t={t} />
-
-          <p className="freshness-note">{t.freshnessNote}</p>
-
-          <p className="warning">
-            ⓘ {t.warning} {t.confirm}
-          </p>
-
-          <p className="demo-notice">ⓘ {t.sample}</p>
-        </section>
+        <ShopDetails
+          report={selectedShop}
+          onClose={() => setSelectedShop(null)}
+          t={t}
+        />
       )}
 
       <footer>{t.footer}</footer>

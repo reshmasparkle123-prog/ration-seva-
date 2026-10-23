@@ -5,7 +5,8 @@ RationSeva - Weighing-scale photo reader (Cloudinary OCR)
 Beneficiary photographs the weighing-scale display while collecting ration.
 Cloudinary's OCR add-on (Google Vision) reads the digits, we compare the
 reading with the entitlement, and if it's short we create complaint evidence:
-a stamped photo + the numbers.
+a stamped photo + the numbers. Ambiguous readings (product/label text, several
+plausible numbers) come back UNREADABLE instead of being guessed.
 
 Needs: Cloudinary "OCR Text Detection and Extraction" add-on (free plan).
 
@@ -22,6 +23,15 @@ from cloudinary_proof import configure, proof_from_incoming, upload_proof
 
 NUM_RE = re.compile(r"(\d{1,3}(?:[.,]\d{1,3})?)\s*(kg|kgs|g|gm|gms)?\b", re.I)
 
+# lines that are product descriptions / specs, not a live reading
+IGNORED_LINE_RE = re.compile(
+    r"\b(max|min|capacity|cap|model|serial|mercadolibre|amazon|"
+    r"price|product|kitchen scale|unit|resolution|division)\b",
+    re.I,
+)
+
+UNREADABLE_MSG = "Couldn't read a valid weight. Please retake the photo or enter the weight manually."
+
 
 def ocr_text(cloudinary_response):
     """Full text Google Vision found in the image ('' if nothing / add-on missing)."""
@@ -30,49 +40,48 @@ def ocr_text(cloudinary_response):
         return None, ocr.get("status", "not_requested")
     try:
         return ocr["data"][0]["textAnnotations"][0]["description"], "complete"
-    except (KeyError, IndexError):
+    except (KeyError, IndexError, TypeError):
         return "", "complete"
 
 
 def pick_weight_kg(text):
     """
-    Choose the most likely weight reading from OCR text.
-    Preference: number with 'kg' > number with a decimal point (scale displays: 4.985) > any number.
-    Returns (kg, raw_match) or (None, None).
+    Conservatively pick the scale reading from OCR text.
+    Skips product/spec lines, printed labels ("30kg max", "e=5g") and model codes ("DS-252"),
+    and needs a decimal point or a unit. Returns (kg, raw_match) only when exactly one
+    plausible candidate is left, else (None, None) - we don't guess.
     """
     if not text:
         return None, None
     candidates = []
-    for m in NUM_RE.finditer(text):
-        raw, unit = m.group(1), (m.group(2) or "").lower()
-        value = float(raw.replace(",", "."))
-        if unit.startswith("g") and unit != "":
-            value /= 1000.0
-        score = 0
-        if unit.startswith("kg"):
-            score += 3
-        elif unit.startswith("g"):
-            score += 2
-        if "." in raw or "," in raw:
-            score += 2
-        if 0 < value <= 100:          # ration loads are a few kg to ~50 kg
-            score += 1
-        # printed labels on the scale body, not the reading: "30kg max", "Min 100g", "e=5g", "Cap 30kg"
-        line_start = text.rfind("\n", 0, m.start()) + 1
-        line_end = text.find("\n", m.end())
-        line_end = len(text) if line_end == -1 else line_end
-        around = text[max(line_start, m.start() - 6):min(line_end, m.end() + 6)].lower()
-        if re.search(r"max|min|cap|e\s*=|d\s*=", around):
-            score -= 10
-        # part of a model/serial code like "DS-252" or "A12"
-        prev = text[m.start() - 1] if m.start() > 0 else " "
-        if prev.isalpha() or prev == "-":
-            score -= 5
-        candidates.append((score, value, m.group(0)))
-    if not candidates:
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or IGNORED_LINE_RE.search(line):
+            continue
+        in_line = []
+        for m in NUM_RE.finditer(line):
+            raw, unit = m.group(1), (m.group(2) or "").lower()
+            # printed labels on the scale body, not the reading: "Min 100g", "e=5g", "d=1g"
+            around = line[max(0, m.start() - 6):m.end() + 6].lower()
+            if re.search(r"e\s*=|d\s*=", around):
+                continue
+            # part of a model/serial code like "DS-252" or "A12"
+            prev = line[m.start() - 1] if m.start() > 0 else " "
+            if prev.isalpha() or prev == "-":
+                continue
+            if "." not in raw and "," not in raw and not unit:
+                continue
+            value = float(raw.replace(",", "."))
+            if unit in ("g", "gm", "gms"):
+                value /= 1000.0
+            if not 0 < value <= 100:          # ration loads are a few kg to ~50 kg
+                continue
+            in_line.append((round(value, 3), m.group(0).strip()))
+        if len(in_line) == 1:                 # several numbers on one line -> don't guess
+            candidates += in_line
+    if len(candidates) != 1:
         return None, None
-    best = max(candidates, key=lambda c: c[0])
-    return round(best[1], 3), best[2].strip()
+    return candidates[0]
 
 
 def check_scale(image, fps_id, expected_kg, commodity=None, tolerance_kg=0.1, lat=None, lng=None):
@@ -90,14 +99,15 @@ def check_scale_incoming(public_id, fps_id, expected_kg, commodity=None, toleran
 
 
 def scale_verdict(proof, expected_kg, commodity, tolerance_kg):
-    raw = proof.pop("_raw")
+    raw = proof.pop("_raw", {})
     text, status = ocr_text(raw)
     reading, matched = pick_weight_kg(text)
 
     if status != "complete":
         verdict, message = "OCR_UNAVAILABLE", f"OCR status: {status}. Is the OCR add-on enabled?"
-    elif reading is None:
-        verdict, message = "UNREADABLE", "Couldn't read the scale. Ask the user to retake the photo or type the weight."
+    elif reading is None or reading <= 0:
+        # never SHORT_WEIGHT on a 0 / missing reading
+        verdict, message = "UNREADABLE", UNREADABLE_MSG
     elif reading > expected_kg * 1.5 and reading > expected_kg + 2:
         # way over entitlement -> more likely a misread / wrong photo than generous dealer
         verdict, message = "NEEDS_REVIEW", (f"Reading {reading} kg is far above entitlement {expected_kg} kg - "
