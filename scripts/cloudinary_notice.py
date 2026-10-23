@@ -37,6 +37,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SIZE = 1080
 BASE_ID = "rationseva/notice/base_1080"
 BASE_RGB = (11, 61, 46)   # dark green
+SCRIM_ID = "rationseva/notice/scrim_v2"   # black gradient behind text on photo backgrounds
+SCRIM_ALPHA = 95                          # ~37% black where it is solid
 
 NOTO = "https://raw.githubusercontent.com/notofonts/notofonts.github.io/main/fonts"
 FONT_FILES = {
@@ -99,16 +101,26 @@ LANGS = {
 
 # ---------------------------------------------------------------- one-time assets
 
-def solid_png(width, height, rgb):
-    """Minimal PNG of one colour, no Pillow needed."""
-    row = b"\x00" + bytes(rgb) * width
-    raw = zlib.compress(row * height, 9)
-
+def _png(width, height, rows, color_type):
     def chunk(tag, data):
         return struct.pack(">I", len(data)) + tag + data + struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF)
 
-    return (b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 2, 0, 0, 0))
+    raw = zlib.compress(b"".join(b"\x00" + r * width for r in rows), 9)
+    return (b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, color_type, 0, 0, 0))
             + chunk(b"IDAT", raw) + chunk(b"IEND", b""))
+
+
+def solid_png(width, height, rgb):
+    """Minimal PNG of one colour, no Pillow needed."""
+    return _png(width, height, [bytes(rgb)] * height, 2)
+
+
+def scrim_png(height=256, alpha=SCRIM_ALPHA, solid=0.7):
+    """1px-wide black RGBA strip: `alpha` for the top `solid` part, then fading to transparent."""
+    start = int(height * solid)
+    rows = [bytes((0, 0, 0, alpha if y < start else round(alpha * (height - 1 - y) / (height - 1 - start))))
+            for y in range(height)]
+    return _png(1, height, rows, 6)
 
 
 def _exists(public_id, **kw):
@@ -125,6 +137,9 @@ def ensure_assets():
     if not _exists(BASE_ID):
         data_uri = "data:image/png;base64," + base64.b64encode(solid_png(SIZE, SIZE, BASE_RGB)).decode()
         cloudinary.uploader.upload(data_uri, public_id=BASE_ID, overwrite=False, tags=["rationseva", "notice"])
+    if not _exists(SCRIM_ID):
+        data_uri = "data:image/png;base64," + base64.b64encode(scrim_png()).decode()
+        cloudinary.uploader.upload(data_uri, public_id=SCRIM_ID, overwrite=False, tags=["rationseva", "notice"])
     for name, url in FONT_FILES.items():
         pid = f"{FONT_FOLDER}/{name}"
         # Cloudinary only uses custom fonts stored as raw + authenticated
@@ -210,22 +225,27 @@ def build_notice(fps_id, language="te", photo_public_id=None, timings=None):
         raise LookupError(f"FPS {fps_id} has no AVAILABLE or LOW stock")
     L, latin = LANGS[language], "NotoSans-Regular.ttf"
 
-    layers = [{"width": SIZE, "height": SIZE, "crop": "fill", "gravity": "auto"}]
-    if photo_public_id:
-        # darken, then a dark-green tint so white text stays readable on any photo
-        layers.append({"effect": "brightness:-60"})
-        layers.append({"overlay": BASE_ID.replace("/", ":"), "opacity": 70,
-                       "width": SIZE, "height": SIZE, "crop": "fill"})
-
-    layers.append(text(L["title"], L["font"], 68, 90, color="rgb:FFD54F"))
+    body = [text(L["title"], L["font"], 68, 90, color="rgb:FFD54F")]
     y = 250
     for it in items:
-        layers.append(text(it["line"], it["font"], 52, y))
+        body.append(text(it["line"], it["font"], 52, y))
         y += 80
         if it["status"] == "LOW":
-            layers.append(text(L["low"], L["font"], 38, y - 8, color="rgb:FF8A65"))
+            body.append(text(L["low"], L["font"], 38, y - 8, color="rgb:FF8A65"))
             y += 64
         y += 20
+
+    layers = [{"width": SIZE, "height": SIZE, "crop": "fill", "gravity": "auto"}]
+    if photo_public_id:
+        # lightly darken + green tint so the stock stays visible...
+        layers.append({"effect": "brightness:-35"})
+        layers.append({"overlay": BASE_ID.replace("/", ":"), "opacity": 50,
+                       "width": SIZE, "height": SIZE, "crop": "fill"})
+        # ...and a soft black gradient only behind the text block (top) and the footer (bottom)
+        scrim = {"overlay": SCRIM_ID.replace("/", ":"), "width": SIZE, "crop": "scale"}
+        layers.append({**scrim, "height": min(y + 120, SIZE), "gravity": "north"})
+        layers.append({**scrim, "height": 300, "gravity": "south", "angle": "vflip"})
+    layers += body
 
     # Noto Sans Telugu/Devanagari have digits but no Latin letters ("FPS", "AM" come out as boxes),
     # so Latin text gets its own overlay in Noto Sans and only the label uses the script font.
