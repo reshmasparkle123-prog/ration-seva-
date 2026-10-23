@@ -18,7 +18,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 570.6,
         "received": 7130.0,
@@ -62,7 +62,7 @@
     "flags": [
       {
         "fps_id": "0313044",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 570.60 KG left (7.7% of this month's stock)",
@@ -89,7 +89,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.4,
         "received": 8430.0,
@@ -133,7 +133,7 @@
     "flags": [
       {
         "fps_id": "0302089",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.40 KG left (0.0% of this month's stock)",
@@ -168,7 +168,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 29.4,
         "received": 7359.0,
@@ -196,7 +196,7 @@
     "flags": [
       {
         "fps_id": "0312020",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 29.40 KG left (0.4% of this month's stock)",
@@ -239,7 +239,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 55.9,
         "received": 1965.0,
@@ -267,7 +267,7 @@
     "flags": [
       {
         "fps_id": "0302106",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 55.90 KG left (2.8% of this month's stock)",
@@ -302,7 +302,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 5835.0,
@@ -364,7 +364,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 655.0,
         "received": 3550.0,
@@ -410,7 +410,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 40.0,
         "received": 5775.0,
@@ -446,7 +446,7 @@
     "flags": [
       {
         "fps_id": "0304206",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 40.00 KG left (0.7% of this month's stock)",
@@ -473,7 +473,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 905.0,
         "received": 8265.0,
@@ -527,7 +527,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 11713.0,
@@ -573,7 +573,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 602.1,
         "received": 9595.0,
@@ -617,7 +617,7 @@
     "flags": [
       {
         "fps_id": "0305191",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 602.10 KG left (5.9% of this month's stock)",
@@ -660,7 +660,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 750.0,
         "received": 14430.0,
@@ -696,7 +696,7 @@
     "flags": [
       {
         "fps_id": "0311114",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 750.00 KG left (4.9% of this month's stock)",
@@ -731,7 +731,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 230.0,
         "received": 7795.0,
@@ -775,7 +775,7 @@
     "flags": [
       {
         "fps_id": "0301131",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 230.00 KG left (2.9% of this month's stock)",
@@ -802,7 +802,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 975.6,
         "received": 6340.0,
@@ -841,7 +841,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.6,
         "received": 1510.0,
@@ -885,7 +885,7 @@
     "flags": [
       {
         "fps_id": "0303179",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.60 KG left (2.3% of this month's stock)",
@@ -944,7 +944,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1470.5,
         "received": 7370.0,
@@ -998,7 +998,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 45.8,
         "received": 7750.0,
@@ -1018,7 +1018,7 @@
     "flags": [
       {
         "fps_id": "0312034",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 45.80 KG left (0.6% of this month's stock)",
@@ -1061,7 +1061,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 560.3,
         "received": 9010.0,
@@ -1097,7 +1097,7 @@
     "flags": [
       {
         "fps_id": "0313050",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 560.30 KG left (5.7% of this month's stock)",
@@ -1140,7 +1140,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 8140.0,
@@ -1195,7 +1195,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 36.0,
         "received": 7465.0,
@@ -1239,7 +1239,7 @@
     "flags": [
       {
         "fps_id": "0310195",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 36.00 KG left (0.5% of this month's stock)",
@@ -1266,7 +1266,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 80.0,
         "received": 4830.0,
@@ -1302,7 +1302,7 @@
     "flags": [
       {
         "fps_id": "0305209",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 80.00 KG left (1.6% of this month's stock)",
@@ -1353,7 +1353,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 70.5,
         "received": 4795.0,
@@ -1397,7 +1397,7 @@
     "flags": [
       {
         "fps_id": "0314043",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 70.50 KG left (1.5% of this month's stock)",
@@ -1432,7 +1432,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 938.4,
         "received": 9740.0,
@@ -1476,7 +1476,7 @@
     "flags": [
       {
         "fps_id": "0301110",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 938.40 KG left (8.8% of this month's stock)",
@@ -1511,7 +1511,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 6775.0,
@@ -1566,7 +1566,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1460.0,
         "received": 6580.0,
@@ -1612,7 +1612,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 103.1,
         "received": 9535.0,
@@ -1648,7 +1648,7 @@
     "flags": [
       {
         "fps_id": "0303158",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 103.10 KG left (1.1% of this month's stock)",
@@ -1691,7 +1691,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 235.0,
         "received": 2035.0,
@@ -1721,7 +1721,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.0,
         "received": 4060.0,
@@ -1733,7 +1733,7 @@
     "flags": [
       {
         "fps_id": "0306137",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.00 KG left (0.2% of this month's stock)",
@@ -1752,7 +1752,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 250.0,
         "received": 8050.0,
@@ -1772,7 +1772,7 @@
     "flags": [
       {
         "fps_id": "0313071",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 250.00 KG left (3.1% of this month's stock)",
@@ -1799,7 +1799,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 50.25,
         "received": 1480.0,
@@ -1819,7 +1819,7 @@
     "flags": [
       {
         "fps_id": "0306123",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 50.25 KG left (3.1% of this month's stock)",
@@ -1862,7 +1862,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.83,
         "received": 6985.0,
@@ -1898,7 +1898,7 @@
     "flags": [
       {
         "fps_id": "0312001",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.83 KG left (0.0% of this month's stock)",
@@ -1933,7 +1933,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1434.75,
         "received": 5925.0,
@@ -2012,7 +2012,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 190.0,
         "received": 3050.0,
@@ -2040,7 +2040,7 @@
     "flags": [
       {
         "fps_id": "0314111",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 190.00 KG left (6.2% of this month's stock)",
@@ -2083,7 +2083,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1060.6,
         "received": 6655.0,
@@ -2138,7 +2138,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 5360.0,
@@ -2168,7 +2168,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 629.9,
         "received": 10475.0,
@@ -2204,7 +2204,7 @@
     "flags": [
       {
         "fps_id": "0306159",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 629.90 KG left (5.9% of this month's stock)",
@@ -2255,7 +2255,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 835.1,
         "received": 5670.0,
@@ -2318,7 +2318,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 47.9,
         "received": 15830.0,
@@ -2362,7 +2362,7 @@
     "flags": [
       {
         "fps_id": "0301128",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 47.90 KG left (0.3% of this month's stock)",
@@ -2405,7 +2405,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 265.5,
         "received": 6030.0,
@@ -2433,7 +2433,7 @@
     "flags": [
       {
         "fps_id": "0303160",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 265.50 KG left (4.2% of this month's stock)",
@@ -2468,7 +2468,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.8,
         "received": 15045.0,
@@ -2488,7 +2488,7 @@
     "flags": [
       {
         "fps_id": "0305188",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.80 KG left (0.0% of this month's stock)",
@@ -2539,7 +2539,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 520.0,
         "received": 6340.0,
@@ -2567,7 +2567,7 @@
     "flags": [
       {
         "fps_id": "0301152",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 520.00 KG left (8.0% of this month's stock)",
@@ -2594,7 +2594,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 74.3,
         "received": 3845.0,
@@ -2638,7 +2638,7 @@
     "flags": [
       {
         "fps_id": "0310164",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 74.30 KG left (1.9% of this month's stock)",
@@ -2665,7 +2665,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 2630.9,
         "received": 11250.0,
@@ -2736,7 +2736,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 65.2,
         "received": 13290.0,
@@ -2780,7 +2780,7 @@
     "flags": [
       {
         "fps_id": "0313033",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 65.20 KG left (0.5% of this month's stock)",
@@ -2815,7 +2815,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 2195.0,
@@ -2862,7 +2862,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 20.0,
         "received": 5935.0,
@@ -2890,7 +2890,7 @@
     "flags": [
       {
         "fps_id": "0312057",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 20.00 KG left (0.3% of this month's stock)",
@@ -2909,7 +2909,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 470.0,
         "received": 4200.0,
@@ -2929,7 +2929,7 @@
     "flags": [
       {
         "fps_id": "0311119",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 470.00 KG left (9.9% of this month's stock)",
@@ -2956,7 +2956,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 805.0,
         "received": 11410.0,
@@ -2992,7 +2992,7 @@
     "flags": [
       {
         "fps_id": "0313027",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 805.00 KG left (6.5% of this month's stock)",
@@ -3027,7 +3027,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.0,
         "received": 2260.0,
@@ -3063,7 +3063,7 @@
     "flags": [
       {
         "fps_id": "0311096",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.00 KG left (0.4% of this month's stock)",
@@ -3098,7 +3098,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 350.0,
         "received": 4330.0,
@@ -3142,7 +3142,7 @@
     "flags": [
       {
         "fps_id": "0310170",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 350.00 KG left (7.7% of this month's stock)",
@@ -3169,7 +3169,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.0,
         "received": 4730.0,
@@ -3197,7 +3197,7 @@
     "flags": [
       {
         "fps_id": "0301146",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.00 KG left (0.2% of this month's stock)",
@@ -3232,7 +3232,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1297.0,
         "received": 5890.0,
@@ -3286,7 +3286,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 140.8,
         "received": 6420.0,
@@ -3314,7 +3314,7 @@
     "flags": [
       {
         "fps_id": "0303174",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 140.80 KG left (2.1% of this month's stock)",
@@ -3349,7 +3349,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 8070.0,
@@ -3387,7 +3387,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 370.31,
         "received": 4680.0,
@@ -3407,7 +3407,7 @@
     "flags": [
       {
         "fps_id": "0306140",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 370.31 KG left (7.7% of this month's stock)",
@@ -3434,7 +3434,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.0,
         "received": 4265.0,
@@ -3470,7 +3470,7 @@
     "flags": [
       {
         "fps_id": "0305204",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.00 KG left (0.8% of this month's stock)",
@@ -3497,7 +3497,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1.0,
         "received": 9335.0,
@@ -3525,7 +3525,7 @@
     "flags": [
       {
         "fps_id": "0310151",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 1.00 KG left (0.0% of this month's stock)",
@@ -3552,7 +3552,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 225.0,
         "received": 2505.0,
@@ -3596,7 +3596,7 @@
     "flags": [
       {
         "fps_id": "0310198",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 225.00 KG left (8.1% of this month's stock)",
@@ -3631,7 +3631,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 15.9,
         "received": 4530.0,
@@ -3667,7 +3667,7 @@
     "flags": [
       {
         "fps_id": "0304187",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 15.90 KG left (0.3% of this month's stock)",
@@ -3694,7 +3694,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 480.4,
         "received": 15750.0,
@@ -3730,7 +3730,7 @@
     "flags": [
       {
         "fps_id": "0312018",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 480.40 KG left (2.9% of this month's stock)",
@@ -3765,7 +3765,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 30.7,
         "received": 8165.0,
@@ -3793,7 +3793,7 @@
     "flags": [
       {
         "fps_id": "0303155",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 30.70 KG left (0.4% of this month's stock)",
@@ -3828,7 +3828,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 90.0,
         "received": 7100.0,
@@ -3872,7 +3872,7 @@
     "flags": [
       {
         "fps_id": "0314108",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 90.00 KG left (1.3% of this month's stock)",
@@ -3891,7 +3891,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1330.7,
         "received": 3410.0,
@@ -3954,7 +3954,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 30.0,
         "received": 7535.0,
@@ -3982,7 +3982,7 @@
     "flags": [
       {
         "fps_id": "0314093",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 30.00 KG left (0.4% of this month's stock)",
@@ -4009,7 +4009,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1360.8,
         "received": 9490.0,
@@ -4080,7 +4080,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.0,
         "received": 6020.0,
@@ -4124,7 +4124,7 @@
     "flags": [
       {
         "fps_id": "0303188",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.00 KG left (0.2% of this month's stock)",
@@ -4159,7 +4159,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 4660.0,
@@ -4230,7 +4230,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 5270.0,
@@ -4292,7 +4292,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 790.0,
         "received": 5940.0,
@@ -4338,7 +4338,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 7890.0,
@@ -4385,7 +4385,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.0,
         "received": 2880.0,
@@ -4397,7 +4397,7 @@
     "flags": [
       {
         "fps_id": "0306154",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.00 KG left (0.2% of this month's stock)",
@@ -4424,7 +4424,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.0,
         "received": 3105.0,
@@ -4452,7 +4452,7 @@
     "flags": [
       {
         "fps_id": "0314103",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.00 KG left (0.3% of this month's stock)",
@@ -4471,7 +4471,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 810.4,
         "received": 5375.0,
@@ -4550,7 +4550,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 785.0,
         "received": 8235.0,
@@ -4586,7 +4586,7 @@
     "flags": [
       {
         "fps_id": "0306131",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 785.00 KG left (9.2% of this month's stock)",
@@ -4605,7 +4605,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 910.3,
         "received": 5685.0,
@@ -4652,7 +4652,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.0,
         "received": 5085.0,
@@ -4696,7 +4696,7 @@
     "flags": [
       {
         "fps_id": "0310193",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.00 KG left (0.7% of this month's stock)",
@@ -4739,7 +4739,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 120.0,
         "received": 6215.0,
@@ -4775,7 +4775,7 @@
     "flags": [
       {
         "fps_id": "0304198",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 120.00 KG left (1.9% of this month's stock)",
@@ -4810,7 +4810,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 835.0,
         "received": 9425.0,
@@ -4838,7 +4838,7 @@
     "flags": [
       {
         "fps_id": "0312007",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 835.00 KG left (8.4% of this month's stock)",
@@ -4881,7 +4881,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 946.74,
         "received": 6380.0,
@@ -4936,7 +4936,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 7500.0,
@@ -4974,7 +4974,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 480.0,
         "received": 3495.0,
@@ -5036,7 +5036,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 455.3,
         "received": 9995.0,
@@ -5072,7 +5072,7 @@
     "flags": [
       {
         "fps_id": "0303183",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 455.30 KG left (4.3% of this month's stock)",
@@ -5107,7 +5107,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 2575.0,
@@ -5145,7 +5145,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 20.0,
         "received": 8880.0,
@@ -5189,7 +5189,7 @@
     "flags": [
       {
         "fps_id": "0313038",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 20.00 KG left (0.2% of this month's stock)",
@@ -5224,7 +5224,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 75.0,
         "received": 8860.0,
@@ -5260,7 +5260,7 @@
     "flags": [
       {
         "fps_id": "0311089",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 75.00 KG left (0.8% of this month's stock)",
@@ -5287,7 +5287,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 141.0,
         "received": 13111.0,
@@ -5323,7 +5323,7 @@
     "flags": [
       {
         "fps_id": "0311106",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 141.00 KG left (1.1% of this month's stock)",
@@ -5366,7 +5366,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1235.3,
         "received": 16415.0,
@@ -5394,7 +5394,7 @@
     "flags": [
       {
         "fps_id": "0305183",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 1235.30 KG left (7.0% of this month's stock)",
@@ -5437,7 +5437,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1139.9,
         "received": 10637.0,
@@ -5500,7 +5500,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.0,
         "received": 4130.0,
@@ -5536,7 +5536,7 @@
     "flags": [
       {
         "fps_id": "0304200",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.00 KG left (0.2% of this month's stock)",
@@ -5563,7 +5563,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 140.0,
         "received": 6630.0,
@@ -5583,7 +5583,7 @@
     "flags": [
       {
         "fps_id": "0312026",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 140.00 KG left (2.1% of this month's stock)",
@@ -5610,7 +5610,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1420.2,
         "received": 14270.0,
@@ -5646,7 +5646,7 @@
     "flags": [
       {
         "fps_id": "0302100",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 1420.20 KG left (9.4% of this month's stock)",
@@ -5681,7 +5681,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.9,
         "received": 11010.0,
@@ -5725,7 +5725,7 @@
     "flags": [
       {
         "fps_id": "0313042",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.90 KG left (0.3% of this month's stock)",
@@ -5760,7 +5760,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 30.0,
         "received": 8485.0,
@@ -5788,7 +5788,7 @@
     "flags": [
       {
         "fps_id": "0314070",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 30.00 KG left (0.4% of this month's stock)",
@@ -5815,7 +5815,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.2,
         "received": 5535.0,
@@ -5851,7 +5851,7 @@
     "flags": [
       {
         "fps_id": "0301123",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.20 KG left (0.2% of this month's stock)",
@@ -5902,7 +5902,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 445.8,
         "received": 3895.0,
@@ -5973,7 +5973,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1921.6,
         "received": 6266.0,
@@ -6044,7 +6044,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 7.3,
         "received": 10120.0,
@@ -6088,7 +6088,7 @@
     "flags": [
       {
         "fps_id": "0302114",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 7.30 KG left (0.1% of this month's stock)",
@@ -6131,7 +6131,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.8,
         "received": 8475.0,
@@ -6159,7 +6159,7 @@
     "flags": [
       {
         "fps_id": "0312032",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.80 KG left (0.1% of this month's stock)",
@@ -6202,7 +6202,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 4.8,
         "received": 6735.0,
@@ -6230,7 +6230,7 @@
     "flags": [
       {
         "fps_id": "0305197",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 4.80 KG left (0.1% of this month's stock)",
@@ -6265,7 +6265,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 590.0,
         "received": 6995.0,
@@ -6309,7 +6309,7 @@
     "flags": [
       {
         "fps_id": "0311112",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 590.00 KG left (7.9% of this month's stock)",
@@ -6344,7 +6344,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 133.9,
         "received": 6755.0,
@@ -6372,7 +6372,7 @@
     "flags": [
       {
         "fps_id": "0312048",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 133.90 KG left (2.0% of this month's stock)",
@@ -6423,7 +6423,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1160.15,
         "received": 9420.0,
@@ -6494,7 +6494,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.8,
         "received": 6550.0,
@@ -6530,7 +6530,7 @@
     "flags": [
       {
         "fps_id": "0311078",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.80 KG left (0.1% of this month's stock)",
@@ -6573,7 +6573,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 4635.0,
@@ -6636,7 +6636,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 174.3,
         "received": 5780.0,
@@ -6680,7 +6680,7 @@
     "flags": [
       {
         "fps_id": "0304181",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 174.30 KG left (2.9% of this month's stock)",
@@ -6723,7 +6723,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 230.0,
         "received": 9640.0,
@@ -6743,7 +6743,7 @@
     "flags": [
       {
         "fps_id": "0305202",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 230.00 KG left (2.4% of this month's stock)",
@@ -6770,7 +6770,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 439.1,
         "received": 2840.0,
@@ -6825,7 +6825,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 70.0,
         "received": 3275.0,
@@ -6861,7 +6861,7 @@
     "flags": [
       {
         "fps_id": "0310143",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 70.00 KG left (2.0% of this month's stock)",
@@ -6888,7 +6888,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 20.0,
         "received": 5905.0,
@@ -6908,7 +6908,7 @@
     "flags": [
       {
         "fps_id": "0304195",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 20.00 KG left (0.3% of this month's stock)",
@@ -6927,7 +6927,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 1990.0,
@@ -6965,7 +6965,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.43,
         "received": 3555.0,
@@ -7009,7 +7009,7 @@
     "flags": [
       {
         "fps_id": "0310139",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.43 KG left (0.1% of this month's stock)",
@@ -7044,7 +7044,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 30.0,
         "received": 2080.0,
@@ -7088,7 +7088,7 @@
     "flags": [
       {
         "fps_id": "0314095",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 30.00 KG left (1.4% of this month's stock)",
@@ -7115,7 +7115,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1425.8,
         "received": 7010.0,
@@ -7178,7 +7178,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 25.95,
         "received": 8055.0,
@@ -7214,7 +7214,7 @@
     "flags": [
       {
         "fps_id": "0310162",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 25.95 KG left (0.3% of this month's stock)",
@@ -7249,7 +7249,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1645.0,
         "received": 12540.0,
@@ -7279,7 +7279,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 487.6,
         "received": 4620.0,
@@ -7315,7 +7315,7 @@
     "flags": [
       {
         "fps_id": "0311084",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 487.60 KG left (9.6% of this month's stock)",
@@ -7358,7 +7358,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 880.0,
         "received": 5285.0,
@@ -7404,7 +7404,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 30.3,
         "received": 4575.0,
@@ -7440,7 +7440,7 @@
     "flags": [
       {
         "fps_id": "0313035",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 30.30 KG left (0.7% of this month's stock)",
@@ -7475,7 +7475,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 240.3,
         "received": 7120.0,
@@ -7511,7 +7511,7 @@
     "flags": [
       {
         "fps_id": "0303166",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 240.30 KG left (3.1% of this month's stock)",
@@ -7554,7 +7554,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1838.0,
         "received": 12515.0,
@@ -7641,7 +7641,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 11.0,
         "received": 6450.0,
@@ -7677,7 +7677,7 @@
     "flags": [
       {
         "fps_id": "0314069",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 11.00 KG left (0.2% of this month's stock)",
@@ -7704,7 +7704,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 325.0,
         "received": 4370.0,
@@ -7740,7 +7740,7 @@
     "flags": [
       {
         "fps_id": "0303172",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 325.00 KG left (7.2% of this month's stock)",
@@ -7759,7 +7759,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.0,
         "received": 5655.0,
@@ -7803,7 +7803,7 @@
     "flags": [
       {
         "fps_id": "0311090",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.00 KG left (0.6% of this month's stock)",
@@ -7830,7 +7830,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 9010.0,
@@ -7868,7 +7868,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 745.7,
         "received": 7505.0,
@@ -7912,7 +7912,7 @@
     "flags": [
       {
         "fps_id": "0304169",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 745.70 KG left (9.1% of this month's stock)",
@@ -7939,7 +7939,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 505.0,
         "received": 4985.0,
@@ -7983,7 +7983,7 @@
     "flags": [
       {
         "fps_id": "0301140",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 505.00 KG left (9.3% of this month's stock)",
@@ -8010,7 +8010,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.2,
         "received": 3940.0,
@@ -8030,7 +8030,7 @@
     "flags": [
       {
         "fps_id": "0305190",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.20 KG left (0.0% of this month's stock)",
@@ -8065,7 +8065,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 90.0,
         "received": 5560.0,
@@ -8093,7 +8093,7 @@
     "flags": [
       {
         "fps_id": "0311115",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 90.00 KG left (1.6% of this month's stock)",
@@ -8128,7 +8128,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 675.1,
         "received": 7425.0,
@@ -8164,7 +8164,7 @@
     "flags": [
       {
         "fps_id": "0303178",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 675.10 KG left (8.4% of this month's stock)",
@@ -8199,7 +8199,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.0,
         "received": 2690.0,
@@ -8219,7 +8219,7 @@
     "flags": [
       {
         "fps_id": "0301130",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.00 KG left (0.2% of this month's stock)",
@@ -8254,7 +8254,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 570.2,
         "received": 5890.0,
@@ -8274,7 +8274,7 @@
     "flags": [
       {
         "fps_id": "0314063",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 570.20 KG left (8.9% of this month's stock)",
@@ -8309,7 +8309,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.9,
         "received": 18475.0,
@@ -8345,7 +8345,7 @@
     "flags": [
       {
         "fps_id": "0313051",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.90 KG left (0.2% of this month's stock)",
@@ -8388,7 +8388,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 142.8,
         "received": 3860.0,
@@ -8416,7 +8416,7 @@
     "flags": [
       {
         "fps_id": "0302113",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 142.80 KG left (3.6% of this month's stock)",
@@ -8459,7 +8459,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 860.3,
         "received": 13565.0,
@@ -8487,7 +8487,7 @@
     "flags": [
       {
         "fps_id": "0312035",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 860.30 KG left (6.0% of this month's stock)",
@@ -8530,7 +8530,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 40.2,
         "received": 14720.0,
@@ -8558,7 +8558,7 @@
     "flags": [
       {
         "fps_id": "0312021",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 40.20 KG left (0.3% of this month's stock)",
@@ -8593,7 +8593,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 170.3,
         "received": 4070.0,
@@ -8613,7 +8613,7 @@
     "flags": [
       {
         "fps_id": "0302107",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 170.30 KG left (4.2% of this month's stock)",
@@ -8648,7 +8648,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 122.0,
         "received": 5077.0,
@@ -8684,7 +8684,7 @@
     "flags": [
       {
         "fps_id": "0313045",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 122.00 KG left (2.4% of this month's stock)",
@@ -8711,7 +8711,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 70.4,
         "received": 8590.0,
@@ -8755,7 +8755,7 @@
     "flags": [
       {
         "fps_id": "0302088",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 70.40 KG left (0.8% of this month's stock)",
@@ -8790,7 +8790,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 52.0,
         "received": 5035.0,
@@ -8826,7 +8826,7 @@
     "flags": [
       {
         "fps_id": "0301124",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 52.00 KG left (1.0% of this month's stock)",
@@ -8853,7 +8853,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.0,
         "received": 4750.0,
@@ -8897,7 +8897,7 @@
     "flags": [
       {
         "fps_id": "0311101",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.00 KG left (0.1% of this month's stock)",
@@ -8924,7 +8924,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 2885.0,
         "received": 17320.0,
@@ -8970,7 +8970,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.7,
         "received": 3860.0,
@@ -9014,7 +9014,7 @@
     "flags": [
       {
         "fps_id": "0310168",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.70 KG left (0.0% of this month's stock)",
@@ -9057,7 +9057,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 375.0,
         "received": 5795.0,
@@ -9101,7 +9101,7 @@
     "flags": [
       {
         "fps_id": "0302126",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 375.00 KG left (6.0% of this month's stock)",
@@ -9120,7 +9120,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 15.0,
         "received": 8135.0,
@@ -9156,7 +9156,7 @@
     "flags": [
       {
         "fps_id": "0313064",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 15.00 KG left (0.2% of this month's stock)",
@@ -9191,7 +9191,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 9.35,
         "received": 6490.0,
@@ -9211,7 +9211,7 @@
     "flags": [
       {
         "fps_id": "0306122",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 9.35 KG left (0.1% of this month's stock)",
@@ -9246,7 +9246,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 732.48,
         "received": 7613.0,
@@ -9290,7 +9290,7 @@
     "flags": [
       {
         "fps_id": "0301105",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 732.48 KG left (8.7% of this month's stock)",
@@ -9333,7 +9333,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 430.8,
         "received": 9405.0,
@@ -9377,7 +9377,7 @@
     "flags": [
       {
         "fps_id": "0303184",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 430.80 KG left (4.4% of this month's stock)",
@@ -9420,7 +9420,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 410.0,
         "received": 0.0,
@@ -9474,7 +9474,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.0,
         "received": 7145.0,
@@ -9510,7 +9510,7 @@
     "flags": [
       {
         "fps_id": "0306158",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.00 KG left (0.1% of this month's stock)",
@@ -9537,7 +9537,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 5395.0,
@@ -9584,7 +9584,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.85,
         "received": 6545.0,
@@ -9620,7 +9620,7 @@
     "flags": [
       {
         "fps_id": "0310149",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.85 KG left (0.0% of this month's stock)",
@@ -9679,7 +9679,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 574.0,
         "received": 6090.0,
@@ -9723,7 +9723,7 @@
     "flags": [
       {
         "fps_id": "0310194",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 574.00 KG left (8.9% of this month's stock)",
@@ -9750,7 +9750,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 8940.0,
@@ -9805,7 +9805,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.0,
         "received": 2045.0,
@@ -9841,7 +9841,7 @@
     "flags": [
       {
         "fps_id": "0314104",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.00 KG left (0.2% of this month's stock)",
@@ -9876,7 +9876,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 435.0,
         "received": 3880.0,
@@ -9922,7 +9922,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 585.0,
         "received": 5460.0,
@@ -9950,7 +9950,7 @@
     "flags": [
       {
         "fps_id": "0303159",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 585.00 KG left (9.8% of this month's stock)",
@@ -9985,7 +9985,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 820.36,
         "received": 10730.0,
@@ -10021,7 +10021,7 @@
     "flags": [
       {
         "fps_id": "0301111",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 820.36 KG left (7.1% of this month's stock)",
@@ -10056,7 +10056,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1300.8,
         "received": 9720.0,
@@ -10111,7 +10111,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 75.0,
         "received": 8970.0,
@@ -10131,7 +10131,7 @@
     "flags": [
       {
         "fps_id": "0313070",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 75.00 KG left (0.8% of this month's stock)",
@@ -10158,7 +10158,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 665.0,
         "received": 12690.0,
@@ -10202,7 +10202,7 @@
     "flags": [
       {
         "fps_id": "0312014",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 665.00 KG left (4.9% of this month's stock)",
@@ -10253,7 +10253,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1295.0,
         "received": 10655.0,
@@ -10283,7 +10283,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 77.8,
         "received": 9315.0,
@@ -10319,7 +10319,7 @@
     "flags": [
       {
         "fps_id": "0313026",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 77.80 KG left (0.8% of this month's stock)",
@@ -10346,7 +10346,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 377.4,
         "received": 11512.0,
@@ -10390,7 +10390,7 @@
     "flags": [
       {
         "fps_id": "0311097",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 377.40 KG left (3.2% of this month's stock)",
@@ -10433,7 +10433,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 20.0,
         "received": 8670.0,
@@ -10469,7 +10469,7 @@
     "flags": [
       {
         "fps_id": "0311118",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 20.00 KG left (0.2% of this month's stock)",
@@ -10496,7 +10496,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 6883.0,
@@ -10550,7 +10550,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 45.0,
         "received": 15030.0,
@@ -10570,7 +10570,7 @@
     "flags": [
       {
         "fps_id": "0312038",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 45.00 KG left (0.3% of this month's stock)",
@@ -10605,7 +10605,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 635.7,
         "received": 11130.0,
@@ -10641,7 +10641,7 @@
     "flags": [
       {
         "fps_id": "0302091",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 635.70 KG left (5.2% of this month's stock)",
@@ -10676,7 +10676,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1530.41,
         "received": 2515.0,
@@ -10739,7 +10739,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 58.7,
         "received": 11120.0,
@@ -10775,7 +10775,7 @@
     "flags": [
       {
         "fps_id": "0303161",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 58.70 KG left (0.5% of this month's stock)",
@@ -10826,7 +10826,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.2,
         "received": 5150.0,
@@ -10862,7 +10862,7 @@
     "flags": [
       {
         "fps_id": "0301129",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.20 KG left (0.1% of this month's stock)",
@@ -10913,7 +10913,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 80.5,
         "received": 4000.0,
@@ -10941,7 +10941,7 @@
     "flags": [
       {
         "fps_id": "0310165",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 80.50 KG left (2.0% of this month's stock)",
@@ -10984,7 +10984,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 765.1,
         "received": 8225.0,
@@ -11012,7 +11012,7 @@
     "flags": [
       {
         "fps_id": "0305189",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 765.10 KG left (8.0% of this month's stock)",
@@ -11047,7 +11047,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.0,
         "received": 7040.0,
@@ -11075,7 +11075,7 @@
     "flags": [
       {
         "fps_id": "0312056",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.00 KG left (0.5% of this month's stock)",
@@ -11102,7 +11102,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 575.6,
         "received": 6190.0,
@@ -11146,7 +11146,7 @@
     "flags": [
       {
         "fps_id": "0311083",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 575.60 KG left (8.5% of this month's stock)",
@@ -11189,7 +11189,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.3,
         "received": 11115.0,
@@ -11217,7 +11217,7 @@
     "flags": [
       {
         "fps_id": "0313032",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.30 KG left (0.3% of this month's stock)",
@@ -11244,7 +11244,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 55.0,
         "received": 3395.0,
@@ -11264,7 +11264,7 @@
     "flags": [
       {
         "fps_id": "0306174",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 55.00 KG left (1.6% of this month's stock)",
@@ -11291,7 +11291,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 655.0,
         "received": 6670.0,
@@ -11327,7 +11327,7 @@
     "flags": [
       {
         "fps_id": "0303189",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 655.00 KG left (9.3% of this month's stock)",
@@ -11354,7 +11354,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 43.0,
         "received": 2655.0,
@@ -11390,7 +11390,7 @@
     "flags": [
       {
         "fps_id": "0314092",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 43.00 KG left (1.6% of this month's stock)",
@@ -11417,7 +11417,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 641.1,
         "received": 11856.0,
@@ -11453,7 +11453,7 @@
     "flags": [
       {
         "fps_id": "0301108",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 641.10 KG left (5.2% of this month's stock)",
@@ -11480,7 +11480,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 9.0,
         "received": 3679.0,
@@ -11524,7 +11524,7 @@
     "flags": [
       {
         "fps_id": "0313069",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 9.00 KG left (0.2% of this month's stock)",
@@ -11575,7 +11575,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 3035.5,
         "received": 13800.0,
@@ -11638,7 +11638,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 5775.0,
@@ -11685,7 +11685,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 5835.0,
@@ -11739,7 +11739,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 486.1,
         "received": 4445.0,
@@ -11794,7 +11794,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 110.0,
         "received": 5850.0,
@@ -11822,7 +11822,7 @@
     "flags": [
       {
         "fps_id": "0306141",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 110.00 KG left (1.9% of this month's stock)",
@@ -11841,7 +11841,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 20.2,
         "received": 5475.0,
@@ -11885,7 +11885,7 @@
     "flags": [
       {
         "fps_id": "0304186",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 20.20 KG left (0.4% of this month's stock)",
@@ -11920,7 +11920,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 40.4,
         "received": 4570.0,
@@ -11948,7 +11948,7 @@
     "flags": [
       {
         "fps_id": "0305205",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 40.40 KG left (0.8% of this month's stock)",
@@ -11975,7 +11975,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 400.1,
         "received": 5695.0,
@@ -11995,7 +11995,7 @@
     "flags": [
       {
         "fps_id": "0310150",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 400.10 KG left (6.4% of this month's stock)",
@@ -12030,7 +12030,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.9,
         "received": 2695.0,
@@ -12058,7 +12058,7 @@
     "flags": [
       {
         "fps_id": "0312019",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.90 KG left (0.2% of this month's stock)",
@@ -12093,7 +12093,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 95.3,
         "received": 7690.0,
@@ -12129,7 +12129,7 @@
     "flags": [
       {
         "fps_id": "0303154",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 95.30 KG left (1.2% of this month's stock)",
@@ -12172,7 +12172,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 1910.0,
@@ -12218,7 +12218,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.0,
         "received": 1895.0,
@@ -12254,7 +12254,7 @@
     "flags": [
       {
         "fps_id": "0304199",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.00 KG left (0.5% of this month's stock)",
@@ -12281,7 +12281,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 100.6,
         "received": 5955.0,
@@ -12301,7 +12301,7 @@
     "flags": [
       {
         "fps_id": "0306124",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 100.60 KG left (1.5% of this month's stock)",
@@ -12352,7 +12352,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 590.0,
         "received": 11470.0,
@@ -12396,7 +12396,7 @@
     "flags": [
       {
         "fps_id": "0313062",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 590.00 KG left (4.9% of this month's stock)",
@@ -12439,7 +12439,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 70.0,
         "received": 9735.0,
@@ -12475,7 +12475,7 @@
     "flags": [
       {
         "fps_id": "0312006",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 70.00 KG left (0.7% of this month's stock)",
@@ -12502,7 +12502,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 125.63,
         "received": 4245.0,
@@ -12530,7 +12530,7 @@
     "flags": [
       {
         "fps_id": "0303182",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 125.63 KG left (2.9% of this month's stock)",
@@ -12573,7 +12573,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 6.0,
         "received": 3936.0,
@@ -12609,7 +12609,7 @@
     "flags": [
       {
         "fps_id": "0314116",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 6.00 KG left (0.2% of this month's stock)",
@@ -12644,7 +12644,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 744.7,
         "received": 6590.0,
@@ -12731,7 +12731,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 805.0,
         "received": 1100.0,
@@ -12785,7 +12785,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 890.05,
         "received": 8485.0,
@@ -12829,7 +12829,7 @@
     "flags": [
       {
         "fps_id": "0314050",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 890.05 KG left (9.7% of this month's stock)",
@@ -12872,7 +12872,7 @@
         "status": "OUT_OF_STOCK"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1053.2,
         "received": 3909.0,
@@ -12943,7 +12943,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.15,
         "received": 12025.0,
@@ -12971,7 +12971,7 @@
     "flags": [
       {
         "fps_id": "0312012",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.15 KG left (0.0% of this month's stock)",
@@ -13038,7 +13038,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 295.0,
         "received": 7110.0,
@@ -13074,7 +13074,7 @@
     "flags": [
       {
         "fps_id": "0306130",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 295.00 KG left (3.7% of this month's stock)",
@@ -13109,7 +13109,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 350.7,
         "received": 6885.0,
@@ -13145,7 +13145,7 @@
     "flags": [
       {
         "fps_id": "0310192",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 350.70 KG left (4.6% of this month's stock)",
@@ -13180,7 +13180,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 25.7,
         "received": 6740.0,
@@ -13208,7 +13208,7 @@
     "flags": [
       {
         "fps_id": "0301136",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 25.70 KG left (0.4% of this month's stock)",
@@ -13243,7 +13243,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 180.1,
         "received": 2225.0,
@@ -13279,7 +13279,7 @@
     "flags": [
       {
         "fps_id": "0314065",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 180.10 KG left (7.0% of this month's stock)",
@@ -13314,7 +13314,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 163.0,
         "received": 6515.0,
@@ -13350,7 +13350,7 @@
     "flags": [
       {
         "fps_id": "0302115",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 163.00 KG left (2.4% of this month's stock)",
@@ -13385,7 +13385,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 117.0,
         "received": 7857.0,
@@ -13413,7 +13413,7 @@
     "flags": [
       {
         "fps_id": "0312033",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 117.00 KG left (1.5% of this month's stock)",
@@ -13440,7 +13440,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 40.0,
         "received": 14880.0,
@@ -13484,7 +13484,7 @@
     "flags": [
       {
         "fps_id": "0313057",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 40.00 KG left (0.3% of this month's stock)",
@@ -13519,7 +13519,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1060.67,
         "received": 10405.0,
@@ -13547,7 +13547,7 @@
     "flags": [
       {
         "fps_id": "0304165",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 1060.67 KG left (9.4% of this month's stock)",
@@ -13590,7 +13590,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 110.8,
         "received": 16320.0,
@@ -13626,7 +13626,7 @@
     "flags": [
       {
         "fps_id": "0305196",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 110.80 KG left (0.6% of this month's stock)",
@@ -13661,7 +13661,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 125.0,
         "received": 2285.0,
@@ -13689,7 +13689,7 @@
     "flags": [
       {
         "fps_id": "0311113",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 125.00 KG left (5.3% of this month's stock)",
@@ -13708,7 +13708,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.65,
         "received": 14610.0,
@@ -13736,7 +13736,7 @@
     "flags": [
       {
         "fps_id": "0312049",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.65 KG left (0.0% of this month's stock)",
@@ -13779,7 +13779,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 105.0,
         "received": 6540.0,
@@ -13807,7 +13807,7 @@
     "flags": [
       {
         "fps_id": "0311107",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 105.00 KG left (1.6% of this month's stock)",
@@ -13858,7 +13858,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 61.8,
         "received": 8265.0,
@@ -13902,7 +13902,7 @@
     "flags": [
       {
         "fps_id": "0313039",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 61.80 KG left (0.7% of this month's stock)",
@@ -13937,7 +13937,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 45.0,
         "received": 2795.0,
@@ -13981,7 +13981,7 @@
     "flags": [
       {
         "fps_id": "0311088",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 45.00 KG left (1.6% of this month's stock)",
@@ -14000,7 +14000,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 30.0,
         "received": 4145.0,
@@ -14036,7 +14036,7 @@
     "flags": [
       {
         "fps_id": "0304201",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 30.00 KG left (0.7% of this month's stock)",
@@ -14071,7 +14071,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5935.0,
         "received": 8825.0,
@@ -14117,7 +14117,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 953.6,
         "received": 12805.0,
@@ -14161,7 +14161,7 @@
     "flags": [
       {
         "fps_id": "0304171",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 953.60 KG left (6.8% of this month's stock)",
@@ -14204,7 +14204,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1055.2,
         "received": 13565.0,
@@ -14248,7 +14248,7 @@
     "flags": [
       {
         "fps_id": "0313043",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 1055.20 KG left (7.3% of this month's stock)",
@@ -14291,7 +14291,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 338.8,
         "received": 6220.0,
@@ -14327,7 +14327,7 @@
     "flags": [
       {
         "fps_id": "0312027",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 338.80 KG left (5.1% of this month's stock)",
@@ -14378,7 +14378,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 695.8,
         "received": 9130.0,
@@ -14406,7 +14406,7 @@
     "flags": [
       {
         "fps_id": "0302101",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 695.80 KG left (7.1% of this month's stock)",
@@ -14433,7 +14433,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 545.0,
         "received": 5805.0,
@@ -14461,7 +14461,7 @@
     "flags": [
       {
         "fps_id": "0314071",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 545.00 KG left (8.4% of this month's stock)",
@@ -14488,7 +14488,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 280.5,
         "received": 9290.0,
@@ -14524,7 +14524,7 @@
     "flags": [
       {
         "fps_id": "0301122",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 280.50 KG left (2.9% of this month's stock)",
@@ -14567,7 +14567,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 34.5,
         "received": 5525.0,
@@ -14611,7 +14611,7 @@
     "flags": [
       {
         "fps_id": "0304194",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 34.50 KG left (0.6% of this month's stock)",
@@ -14646,7 +14646,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 221.9,
         "received": 4010.0,
@@ -14682,7 +14682,7 @@
     "flags": [
       {
         "fps_id": "0310142",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 221.90 KG left (5.1% of this month's stock)",
@@ -14717,7 +14717,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 640.0,
         "received": 6300.0,
@@ -14753,7 +14753,7 @@
     "flags": [
       {
         "fps_id": "0306153",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 640.00 KG left (9.3% of this month's stock)",
@@ -14788,7 +14788,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 25.0,
         "received": 0.0,
@@ -14832,7 +14832,7 @@
     "flags": [
       {
         "fps_id": "0314094",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 25.00 KG left (0.5% of this month's stock)",
@@ -14859,7 +14859,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 240.5,
         "received": 12660.0,
@@ -14903,7 +14903,7 @@
     "flags": [
       {
         "fps_id": "0310138",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 240.50 KG left (1.9% of this month's stock)",
@@ -14946,7 +14946,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 240.1,
         "received": 2685.0,
@@ -14982,7 +14982,7 @@
     "flags": [
       {
         "fps_id": "0306129",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 240.10 KG left (8.3% of this month's stock)",
@@ -15025,7 +15025,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 712.8,
         "received": 9684.0,
@@ -15061,7 +15061,7 @@
     "flags": [
       {
         "fps_id": "0303152",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 712.80 KG left (7.1% of this month's stock)",
@@ -15096,7 +15096,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 499.0,
         "received": 5070.0,
@@ -15116,7 +15116,7 @@
     "flags": [
       {
         "fps_id": "0314049",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 499.00 KG left (9.3% of this month's stock)",
@@ -15143,7 +15143,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 516.8,
         "received": 5570.0,
@@ -15179,7 +15179,7 @@
     "flags": [
       {
         "fps_id": "0311079",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 516.80 KG left (9.0% of this month's stock)",
@@ -15214,7 +15214,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.2,
         "received": 5305.0,
@@ -15242,7 +15242,7 @@
     "flags": [
       {
         "fps_id": "0306147",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.20 KG left (0.0% of this month's stock)",
@@ -15285,7 +15285,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.6,
         "received": 7610.0,
@@ -15313,7 +15313,7 @@
     "flags": [
       {
         "fps_id": "0305203",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.60 KG left (0.0% of this month's stock)",
@@ -15364,7 +15364,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 630.5,
         "received": 4680.0,
@@ -15443,7 +15443,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1655.0,
         "received": 9605.0,
@@ -15497,7 +15497,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 425.55,
         "received": 8950.0,
@@ -15533,7 +15533,7 @@
     "flags": [
       {
         "fps_id": "0302097",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 425.55 KG left (4.5% of this month's stock)",
@@ -15552,7 +15552,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.2,
         "received": 5640.0,
@@ -15580,7 +15580,7 @@
     "flags": [
       {
         "fps_id": "0302118",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.20 KG left (0.6% of this month's stock)",
@@ -15623,7 +15623,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 150.26,
         "received": 7565.0,
@@ -15651,7 +15651,7 @@
     "flags": [
       {
         "fps_id": "0303173",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 150.26 KG left (1.9% of this month's stock)",
@@ -15686,7 +15686,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 450.6,
         "received": 4245.0,
@@ -15722,7 +15722,7 @@
     "flags": [
       {
         "fps_id": "0314068",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 450.60 KG left (9.7% of this month's stock)",
@@ -15749,7 +15749,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 125.0,
         "received": 7495.0,
@@ -15777,7 +15777,7 @@
     "flags": [
       {
         "fps_id": "0312044",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 125.00 KG left (1.7% of this month's stock)",
@@ -15812,7 +15812,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 80.2,
         "received": 4315.0,
@@ -15840,7 +15840,7 @@
     "flags": [
       {
         "fps_id": "0306166",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 80.20 KG left (1.8% of this month's stock)",
@@ -15883,7 +15883,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 265.0,
         "received": 4160.0,
@@ -15927,7 +15927,7 @@
     "flags": [
       {
         "fps_id": "0311091",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 265.00 KG left (6.0% of this month's stock)",
@@ -15946,7 +15946,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 390.0,
         "received": 3360.0,
@@ -16009,7 +16009,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 465.9,
         "received": 7615.0,
@@ -16037,7 +16037,7 @@
     "flags": [
       {
         "fps_id": "0304168",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 465.90 KG left (5.5% of this month's stock)",
@@ -16088,7 +16088,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.6,
         "received": 7490.0,
@@ -16124,7 +16124,7 @@
     "flags": [
       {
         "fps_id": "0310163",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.60 KG left (0.1% of this month's stock)",
@@ -16159,7 +16159,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 436.5,
         "received": 5685.0,
@@ -16203,7 +16203,7 @@
     "flags": [
       {
         "fps_id": "0311085",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 436.50 KG left (7.2% of this month's stock)",
@@ -16238,7 +16238,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 450.0,
         "received": 5200.0,
@@ -16258,7 +16258,7 @@
     "flags": [
       {
         "fps_id": "0306172",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 450.00 KG left (8.1% of this month's stock)",
@@ -16285,7 +16285,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 240.7,
         "received": 3090.0,
@@ -16313,7 +16313,7 @@
     "flags": [
       {
         "fps_id": "0313034",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 240.70 KG left (7.1% of this month's stock)",
@@ -16356,7 +16356,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1400.0,
         "received": 14995.0,
@@ -16384,7 +16384,7 @@
     "flags": [
       {
         "fps_id": "0312050",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 1400.00 KG left (8.6% of this month's stock)",
@@ -16427,7 +16427,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 4548.2,
         "received": 9486.0,
@@ -16482,7 +16482,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 456.3,
         "received": 9285.0,
@@ -16518,7 +16518,7 @@
     "flags": [
       {
         "fps_id": "0304188",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 456.30 KG left (4.6% of this month's stock)",
@@ -16561,7 +16561,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 520.0,
         "received": 4290.0,
@@ -16624,7 +16624,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1520.2,
         "received": 12080.0,
@@ -16695,7 +16695,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 430.1,
         "received": 4675.0,
@@ -16731,7 +16731,7 @@
     "flags": [
       {
         "fps_id": "0306135",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 430.10 KG left (8.5% of this month's stock)",
@@ -16766,7 +16766,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 270.0,
         "received": 2115.0,
@@ -16828,7 +16828,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 70.1,
         "received": 5900.0,
@@ -16864,7 +16864,7 @@
     "flags": [
       {
         "fps_id": "0301112",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 70.10 KG left (1.2% of this month's stock)",
@@ -16907,7 +16907,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 110.0,
         "received": 4625.0,
@@ -16951,7 +16951,7 @@
     "flags": [
       {
         "fps_id": "0303187",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 110.00 KG left (2.3% of this month's stock)",
@@ -16978,7 +16978,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 81.3,
         "received": 11635.0,
@@ -17014,7 +17014,7 @@
     "flags": [
       {
         "fps_id": "0301106",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 81.30 KG left (0.7% of this month's stock)",
@@ -17057,7 +17057,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 15.0,
         "received": 3625.0,
@@ -17093,7 +17093,7 @@
     "flags": [
       {
         "fps_id": "0313067",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 15.00 KG left (0.4% of this month's stock)",
@@ -17128,7 +17128,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 15.65,
         "received": 8965.0,
@@ -17148,7 +17148,7 @@
     "flags": [
       {
         "fps_id": "0312003",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 15.65 KG left (0.2% of this month's stock)",
@@ -17199,7 +17199,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 279.7,
         "received": 8158.0,
@@ -17251,7 +17251,7 @@
     "flags": [
       {
         "fps_id": "0314074",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 279.70 KG left (3.3% of this month's stock)",
@@ -17294,7 +17294,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 49.0,
         "received": 14910.0,
@@ -17330,7 +17330,7 @@
     "flags": [
       {
         "fps_id": "0301127",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 49.00 KG left (0.3% of this month's stock)",
@@ -17357,7 +17357,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 38.6,
         "received": 16825.0,
@@ -17377,7 +17377,7 @@
     "flags": [
       {
         "fps_id": "0313046",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 38.60 KG left (0.2% of this month's stock)",
@@ -17428,7 +17428,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 790.2,
         "received": 6115.0,
@@ -17475,7 +17475,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.0,
         "received": 13120.0,
@@ -17511,7 +17511,7 @@
     "flags": [
       {
         "fps_id": "0302104",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.00 KG left (0.1% of this month's stock)",
@@ -17546,7 +17546,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 455.0,
         "received": 3155.0,
@@ -17600,7 +17600,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 730.2,
         "received": 14660.0,
@@ -17644,7 +17644,7 @@
     "flags": [
       {
         "fps_id": "0305187",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 730.20 KG left (4.7% of this month's stock)",
@@ -17679,7 +17679,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.65,
         "received": 7255.0,
@@ -17723,7 +17723,7 @@
     "flags": [
       {
         "fps_id": "0304174",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.65 KG left (0.0% of this month's stock)",
@@ -17758,7 +17758,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 795.0,
         "received": 2720.0,
@@ -17788,7 +17788,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 33.0,
         "received": 5480.0,
@@ -17832,7 +17832,7 @@
     "flags": [
       {
         "fps_id": "0311102",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 33.00 KG left (0.6% of this month's stock)",
@@ -17859,7 +17859,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 120.0,
         "received": 12560.0,
@@ -17903,7 +17903,7 @@
     "flags": [
       {
         "fps_id": "0311099",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 120.00 KG left (0.9% of this month's stock)",
@@ -17930,7 +17930,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 70.7,
         "received": 4830.0,
@@ -17966,7 +17966,7 @@
     "flags": [
       {
         "fps_id": "0313028",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 70.70 KG left (1.4% of this month's stock)",
@@ -18001,7 +18001,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 25.0,
         "received": 8845.0,
@@ -18037,7 +18037,7 @@
     "flags": [
       {
         "fps_id": "0311116",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 25.00 KG left (0.3% of this month's stock)",
@@ -18072,7 +18072,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 975.08,
         "received": 11400.0,
@@ -18116,7 +18116,7 @@
     "flags": [
       {
         "fps_id": "0305193",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 975.08 KG left (7.9% of this month's stock)",
@@ -18159,7 +18159,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 30.0,
         "received": 4180.0,
@@ -18187,7 +18187,7 @@
     "flags": [
       {
         "fps_id": "0301149",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 30.00 KG left (0.7% of this month's stock)",
@@ -18214,7 +18214,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 789.2,
         "received": 4599.0,
@@ -18277,7 +18277,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 90.5,
         "received": 8355.0,
@@ -18305,7 +18305,7 @@
     "flags": [
       {
         "fps_id": "0312036",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 90.50 KG left (1.1% of this month's stock)",
@@ -18332,7 +18332,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 2000.0,
         "received": 13030.0,
@@ -18370,7 +18370,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1991.1,
         "received": 12220.0,
@@ -18433,7 +18433,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 0.0,
@@ -18479,7 +18479,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 12145.0,
@@ -18534,7 +18534,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 320.4,
         "received": 990.0,
@@ -18597,7 +18597,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 29.7,
         "received": 7185.0,
@@ -18633,7 +18633,7 @@
     "flags": [
       {
         "fps_id": "0304185",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 29.70 KG left (0.4% of this month's stock)",
@@ -18660,7 +18660,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 110.0,
         "received": 8700.0,
@@ -18680,7 +18680,7 @@
     "flags": [
       {
         "fps_id": "0312060",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 110.00 KG left (1.2% of this month's stock)",
@@ -18707,7 +18707,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.0,
         "received": 5735.0,
@@ -18727,7 +18727,7 @@
     "flags": [
       {
         "fps_id": "0306142",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.00 KG left (0.1% of this month's stock)",
@@ -18762,7 +18762,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 435.6,
         "received": 5045.0,
@@ -18798,7 +18798,7 @@
     "flags": [
       {
         "fps_id": "0303157",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 435.60 KG left (7.8% of this month's stock)",
@@ -18833,7 +18833,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 560.0,
         "received": 3475.0,
@@ -18903,7 +18903,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.4,
         "received": 2550.0,
@@ -18947,7 +18947,7 @@
     "flags": [
       {
         "fps_id": "0314058",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.40 KG left (0.2% of this month's stock)",
@@ -18990,7 +18990,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 5220.0,
@@ -19053,7 +19053,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 605.0,
         "received": 4180.0,
@@ -19099,7 +19099,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 6930.0,
@@ -19145,7 +19145,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 885.7,
         "received": 12560.0,
@@ -19173,7 +19173,7 @@
     "flags": [
       {
         "fps_id": "0310147",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 885.70 KG left (7.1% of this month's stock)",
@@ -19216,7 +19216,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 574.7,
         "received": 4870.0,
@@ -19279,7 +19279,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 364.85,
         "received": 14079.0,
@@ -19315,7 +19315,7 @@
     "flags": [
       {
         "fps_id": "0303162",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 364.85 KG left (2.5% of this month's stock)",
@@ -19358,7 +19358,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1716.8,
         "received": 7545.0,
@@ -19404,7 +19404,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.7,
         "received": 16005.0,
@@ -19440,7 +19440,7 @@
     "flags": [
       {
         "fps_id": "0313031",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.70 KG left (0.0% of this month's stock)",
@@ -19483,7 +19483,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.0,
         "received": 5725.0,
@@ -19511,7 +19511,7 @@
     "flags": [
       {
         "fps_id": "0312055",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.00 KG left (0.1% of this month's stock)",
@@ -19538,7 +19538,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.0,
         "received": 5435.0,
@@ -19574,7 +19574,7 @@
     "flags": [
       {
         "fps_id": "0301150",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.00 KG left (0.2% of this month's stock)",
@@ -19609,7 +19609,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 435.3,
         "received": 3710.0,
@@ -19688,7 +19688,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.0,
         "received": 8505.0,
@@ -19716,7 +19716,7 @@
     "flags": [
       {
         "fps_id": "0301144",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.00 KG left (0.1% of this month's stock)",
@@ -19743,7 +19743,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.0,
         "received": 3485.0,
@@ -19771,7 +19771,7 @@
     "flags": [
       {
         "fps_id": "0312041",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.00 KG left (0.1% of this month's stock)",
@@ -19798,7 +19798,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.9,
         "received": 8645.0,
@@ -19842,7 +19842,7 @@
     "flags": [
       {
         "fps_id": "0313025",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.90 KG left (0.4% of this month's stock)",
@@ -19885,7 +19885,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 3.0,
         "received": 7360.0,
@@ -19921,7 +19921,7 @@
     "flags": [
       {
         "fps_id": "0311094",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 3.00 KG left (0.0% of this month's stock)",
@@ -19948,7 +19948,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 480.8,
         "received": 8630.0,
@@ -19984,7 +19984,7 @@
     "flags": [
       {
         "fps_id": "0303176",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 480.80 KG left (5.3% of this month's stock)",
@@ -20027,7 +20027,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1398.0,
         "received": 11585.0,
@@ -20098,7 +20098,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1040.8,
         "received": 9355.0,
@@ -20145,7 +20145,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 45.0,
         "received": 11960.0,
@@ -20181,7 +20181,7 @@
     "flags": [
       {
         "fps_id": "0304172",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 45.00 KG left (0.4% of this month's stock)",
@@ -20216,7 +20216,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 45.0,
         "received": 6000.0,
@@ -20236,7 +20236,7 @@
     "flags": [
       {
         "fps_id": "0304202",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 45.00 KG left (0.7% of this month's stock)",
@@ -20263,7 +20263,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.0,
         "received": 6860.0,
@@ -20307,7 +20307,7 @@
     "flags": [
       {
         "fps_id": "0311104",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.00 KG left (0.1% of this month's stock)",
@@ -20342,7 +20342,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.4,
         "received": 3585.0,
@@ -20370,7 +20370,7 @@
     "flags": [
       {
         "fps_id": "0314072",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.40 KG left (0.0% of this month's stock)",
@@ -20405,7 +20405,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.6,
         "received": 5320.0,
@@ -20449,7 +20449,7 @@
     "flags": [
       {
         "fps_id": "0301121",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.60 KG left (0.0% of this month's stock)",
@@ -20492,7 +20492,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 651.62,
         "received": 7470.0,
@@ -20528,7 +20528,7 @@
     "flags": [
       {
         "fps_id": "0303169",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 651.62 KG left (8.3% of this month's stock)",
@@ -20571,7 +20571,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1870.0,
         "received": 15120.0,
@@ -20625,7 +20625,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 45.9,
         "received": 6430.0,
@@ -20669,7 +20669,7 @@
     "flags": [
       {
         "fps_id": "0302102",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 45.90 KG left (0.7% of this month's stock)",
@@ -20712,7 +20712,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 4795.0,
@@ -20750,7 +20750,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1575.75,
         "received": 11115.0,
@@ -20829,7 +20829,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 524.0,
         "received": 4035.0,
@@ -20900,7 +20900,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 50.0,
         "received": 6900.0,
@@ -20936,7 +20936,7 @@
     "flags": [
       {
         "fps_id": "0302116",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 50.00 KG left (0.7% of this month's stock)",
@@ -20963,7 +20963,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1146.1,
         "received": 4620.0,
@@ -21018,7 +21018,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 90.4,
         "received": 13440.0,
@@ -21054,7 +21054,7 @@
     "flags": [
       {
         "fps_id": "0301135",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 90.40 KG left (0.7% of this month's stock)",
@@ -21097,7 +21097,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 122.8,
         "received": 5821.0,
@@ -21141,7 +21141,7 @@
     "flags": [
       {
         "fps_id": "0314066",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 122.80 KG left (2.1% of this month's stock)",
@@ -21192,7 +21192,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 25.0,
         "received": 6975.0,
@@ -21236,7 +21236,7 @@
     "flags": [
       {
         "fps_id": "0311110",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 25.00 KG left (0.4% of this month's stock)",
@@ -21263,7 +21263,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 541.15,
         "received": 7665.0,
@@ -21307,7 +21307,7 @@
     "flags": [
       {
         "fps_id": "0304166",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 541.15 KG left (6.5% of this month's stock)",
@@ -21342,7 +21342,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 265.0,
         "received": 10110.0,
@@ -21378,7 +21378,7 @@
     "flags": [
       {
         "fps_id": "0305195",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 265.00 KG left (2.5% of this month's stock)",
@@ -21405,7 +21405,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 2318.9,
         "received": 5180.0,
@@ -21444,7 +21444,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 410.4,
         "received": 5330.0,
@@ -21464,7 +21464,7 @@
     "flags": [
       {
         "fps_id": "0312011",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 410.40 KG left (7.2% of this month's stock)",
@@ -21507,7 +21507,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 189.5,
         "received": 19540.0,
@@ -21543,7 +21543,7 @@
     "flags": [
       {
         "fps_id": "0314101",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 189.50 KG left (1.0% of this month's stock)",
@@ -21586,7 +21586,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 480.0,
         "received": 4230.0,
@@ -21614,7 +21614,7 @@
     "flags": [
       {
         "fps_id": "0314047",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 480.00 KG left (9.8% of this month's stock)",
@@ -21641,7 +21641,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 3706.3,
         "received": 8510.0,
@@ -21704,7 +21704,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 520.3,
         "received": 8600.0,
@@ -21724,7 +21724,7 @@
     "flags": [
       {
         "fps_id": "0306149",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 520.30 KG left (5.7% of this month's stock)",
@@ -21759,7 +21759,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 480.55,
         "received": 5225.0,
@@ -21795,7 +21795,7 @@
     "flags": [
       {
         "fps_id": "0311077",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 480.55 KG left (8.7% of this month's stock)",
@@ -21838,7 +21838,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.5,
         "received": 3040.0,
@@ -21874,7 +21874,7 @@
     "flags": [
       {
         "fps_id": "0310158",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.50 KG left (0.0% of this month's stock)",
@@ -21925,7 +21925,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 201.0,
         "received": 7120.0,
@@ -21953,7 +21953,7 @@
     "flags": [
       {
         "fps_id": "0314053",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 201.00 KG left (2.8% of this month's stock)",
@@ -21980,7 +21980,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.3,
         "received": 10990.0,
@@ -22008,7 +22008,7 @@
     "flags": [
       {
         "fps_id": "0303181",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.30 KG left (0.0% of this month's stock)",
@@ -22027,7 +22027,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 150.0,
         "received": 3305.0,
@@ -22055,7 +22055,7 @@
     "flags": [
       {
         "fps_id": "0314115",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 150.00 KG left (4.4% of this month's stock)",
@@ -22098,7 +22098,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 775.75,
         "received": 7770.0,
@@ -22134,7 +22134,7 @@
     "flags": [
       {
         "fps_id": "0312005",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 775.75 KG left (9.4% of this month's stock)",
@@ -22169,7 +22169,7 @@
         "status": "OUT_OF_STOCK"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 39.2,
         "received": 3510.0,
@@ -22197,7 +22197,7 @@
     "flags": [
       {
         "fps_id": "0313061",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 39.20 KG left (1.1% of this month's stock)",
@@ -22232,7 +22232,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1498.85,
         "received": 8295.0,
@@ -22295,7 +22295,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 635.0,
         "received": 11075.0,
@@ -22339,7 +22339,7 @@
     "flags": [
       {
         "fps_id": "0311109",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 635.00 KG left (5.4% of this month's stock)",
@@ -22366,7 +22366,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1160.0,
         "received": 7795.0,
@@ -22420,7 +22420,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 118.5,
         "received": 5240.0,
@@ -22456,7 +22456,7 @@
     "flags": [
       {
         "fps_id": "0311086",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 118.50 KG left (2.2% of this month's stock)",
@@ -22483,7 +22483,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1445.7,
         "received": 5165.0,
@@ -22546,7 +22546,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 275.65,
         "received": 11745.0,
@@ -22582,7 +22582,7 @@
     "flags": [
       {
         "fps_id": "0306171",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 275.65 KG left (2.3% of this month's stock)",
@@ -22625,7 +22625,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 684.6,
         "received": 3404.0,
@@ -22704,7 +22704,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 50.5,
         "received": 9180.0,
@@ -22732,7 +22732,7 @@
     "flags": [
       {
         "fps_id": "0312029",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 50.50 KG left (0.5% of this month's stock)",
@@ -22783,7 +22783,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 500.4,
         "received": 8735.0,
@@ -22819,7 +22819,7 @@
     "flags": [
       {
         "fps_id": "0303164",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 500.40 KG left (5.4% of this month's stock)",
@@ -22870,7 +22870,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 19.38,
         "received": 5710.0,
@@ -22906,7 +22906,7 @@
     "flags": [
       {
         "fps_id": "0303170",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 19.38 KG left (0.3% of this month's stock)",
@@ -22949,7 +22949,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 7450.0,
@@ -23003,7 +23003,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 810.5,
         "received": 12640.0,
@@ -23031,7 +23031,7 @@
     "flags": [
       {
         "fps_id": "0302094",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 810.50 KG left (6.2% of this month's stock)",
@@ -23066,7 +23066,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 330.6,
         "received": 3290.0,
@@ -23102,7 +23102,7 @@
     "flags": [
       {
         "fps_id": "0305198",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 330.60 KG left (9.5% of this month's stock)",
@@ -23153,7 +23153,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 192.0,
         "received": 4147.0,
@@ -23205,7 +23205,7 @@
     "flags": [
       {
         "fps_id": "0301142",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 192.00 KG left (3.9% of this month's stock)",
@@ -23240,7 +23240,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 3100.0,
         "received": 8745.0,
@@ -23318,7 +23318,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 47.0,
         "received": 7315.0,
@@ -23362,7 +23362,7 @@
     "flags": [
       {
         "fps_id": "0312047",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 47.00 KG left (0.6% of this month's stock)",
@@ -23397,7 +23397,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 700.25,
         "received": 9030.0,
@@ -23441,7 +23441,7 @@
     "flags": [
       {
         "fps_id": "0301119",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 700.25 KG left (7.2% of this month's stock)",
@@ -23476,7 +23476,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1345.38,
         "received": 11525.0,
@@ -23531,7 +23531,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.1,
         "received": 11480.0,
@@ -23567,7 +23567,7 @@
     "flags": [
       {
         "fps_id": "0304183",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.10 KG left (0.0% of this month's stock)",
@@ -23626,7 +23626,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 455.8,
         "received": 10575.0,
@@ -23654,7 +23654,7 @@
     "flags": [
       {
         "fps_id": "0305200",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 455.80 KG left (4.1% of this month's stock)",
@@ -23681,7 +23681,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.9,
         "received": 3370.0,
@@ -23725,7 +23725,7 @@
     "flags": [
       {
         "fps_id": "0310155",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.90 KG left (0.2% of this month's stock)",
@@ -23768,7 +23768,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 3055.0,
@@ -23807,7 +23807,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 215.0,
         "received": 595.0,
@@ -23845,7 +23845,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 25.8,
         "received": 8565.0,
@@ -23881,7 +23881,7 @@
     "flags": [
       {
         "fps_id": "0310141",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 25.80 KG left (0.3% of this month's stock)",
@@ -23924,7 +23924,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 80.0,
         "received": 10379.0,
@@ -23960,7 +23960,7 @@
     "flags": [
       {
         "fps_id": "0304197",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 80.00 KG left (0.8% of this month's stock)",
@@ -23987,7 +23987,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 595.9,
         "received": 10265.0,
@@ -24015,7 +24015,7 @@
     "flags": [
       {
         "fps_id": "0312008",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 595.90 KG left (5.2% of this month's stock)",
@@ -24050,7 +24050,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 20.0,
         "received": 2635.0,
@@ -24094,7 +24094,7 @@
     "flags": [
       {
         "fps_id": "0314118",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 20.00 KG left (0.8% of this month's stock)",
@@ -24137,7 +24137,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 20.0,
         "received": 1515.0,
@@ -24157,7 +24157,7 @@
     "flags": [
       {
         "fps_id": "0314097",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 20.00 KG left (1.3% of this month's stock)",
@@ -24184,7 +24184,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.5,
         "received": 7595.0,
@@ -24228,7 +24228,7 @@
     "flags": [
       {
         "fps_id": "0301107",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.50 KG left (0.0% of this month's stock)",
@@ -24279,7 +24279,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 16.7,
         "received": 6681.0,
@@ -24307,7 +24307,7 @@
     "flags": [
       {
         "fps_id": "0314054",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 16.70 KG left (0.2% of this month's stock)",
@@ -24350,7 +24350,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 430.52,
         "received": 11490.0,
@@ -24378,7 +24378,7 @@
     "flags": [
       {
         "fps_id": "0303186",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 430.52 KG left (3.6% of this month's stock)",
@@ -24413,7 +24413,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 430.0,
         "received": 2310.0,
@@ -24468,7 +24468,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 985.0,
         "received": 6490.0,
@@ -24522,7 +24522,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 4165.0,
@@ -24576,7 +24576,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 310.0,
         "received": 3100.0,
@@ -24596,7 +24596,7 @@
     "flags": [
       {
         "fps_id": "0311122",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 310.00 KG left (8.9% of this month's stock)",
@@ -24615,7 +24615,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 190.4,
         "received": 5085.0,
@@ -24651,7 +24651,7 @@
     "flags": [
       {
         "fps_id": "0310196",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 190.40 KG left (3.7% of this month's stock)",
@@ -24686,7 +24686,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 238.2,
         "received": 3395.0,
@@ -24730,7 +24730,7 @@
     "flags": [
       {
         "fps_id": "0304189",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 238.20 KG left (6.6% of this month's stock)",
@@ -24773,7 +24773,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 20.65,
         "received": 4645.0,
@@ -24809,7 +24809,7 @@
     "flags": [
       {
         "fps_id": "0306134",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 20.65 KG left (0.4% of this month's stock)",
@@ -24836,7 +24836,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 635.0,
         "received": 9755.0,
@@ -24856,7 +24856,7 @@
     "flags": [
       {
         "fps_id": "0312016",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 635.00 KG left (6.2% of this month's stock)",
@@ -24891,7 +24891,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 5530.0,
@@ -24929,7 +24929,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 15.0,
         "received": 3265.0,
@@ -24973,7 +24973,7 @@
     "flags": [
       {
         "fps_id": "0303192",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 15.00 KG left (0.5% of this month's stock)",
@@ -25008,7 +25008,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 2365.0,
@@ -25046,7 +25046,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1086.6,
         "received": 10885.0,
@@ -25090,7 +25090,7 @@
     "flags": [
       {
         "fps_id": "0301113",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 1086.60 KG left (9.0% of this month's stock)",
@@ -25125,7 +25125,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1000.0,
         "received": 4145.0,
@@ -25179,7 +25179,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 130.0,
         "received": 4635.0,
@@ -25223,7 +25223,7 @@
     "flags": [
       {
         "fps_id": "0311098",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 130.00 KG left (2.8% of this month's stock)",
@@ -25242,7 +25242,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1315.15,
         "received": 6240.0,
@@ -25289,7 +25289,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 273.0,
         "received": 3675.0,
@@ -25325,7 +25325,7 @@
     "flags": [
       {
         "fps_id": "0301148",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 273.00 KG left (7.2% of this month's stock)",
@@ -25344,7 +25344,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1760.0,
         "received": 13340.0,
@@ -25406,7 +25406,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 695.1,
         "received": 11475.0,
@@ -25442,7 +25442,7 @@
     "flags": [
       {
         "fps_id": "0313053",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 695.10 KG left (5.7% of this month's stock)",
@@ -25485,7 +25485,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 8.0,
         "received": 7558.0,
@@ -25521,7 +25521,7 @@
     "flags": [
       {
         "fps_id": "0302111",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 8.00 KG left (0.1% of this month's stock)",
@@ -25548,7 +25548,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 150.0,
         "received": 3450.0,
@@ -25576,7 +25576,7 @@
     "flags": [
       {
         "fps_id": "0312037",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 150.00 KG left (4.2% of this month's stock)",
@@ -25611,7 +25611,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.6,
         "received": 8600.0,
@@ -25647,7 +25647,7 @@
     "flags": [
       {
         "fps_id": "0301132",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.60 KG left (0.4% of this month's stock)",
@@ -25690,7 +25690,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 2187.9,
         "received": 8157.0,
@@ -25769,7 +25769,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.6,
         "received": 5410.0,
@@ -25821,7 +25821,7 @@
     "flags": [
       {
         "fps_id": "0314075",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.60 KG left (0.0% of this month's stock)",
@@ -25856,7 +25856,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 20.4,
         "received": 8245.0,
@@ -25900,7 +25900,7 @@
     "flags": [
       {
         "fps_id": "0301126",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 20.40 KG left (0.2% of this month's stock)",
@@ -25943,7 +25943,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.9,
         "received": 3205.0,
@@ -25971,7 +25971,7 @@
     "flags": [
       {
         "fps_id": "0312023",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.90 KG left (0.2% of this month's stock)",
@@ -26014,7 +26014,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.5,
         "received": 4450.0,
@@ -26042,7 +26042,7 @@
     "flags": [
       {
         "fps_id": "0302105",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.50 KG left (0.2% of this month's stock)",
@@ -26085,7 +26085,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1410.0,
         "received": 12285.0,
@@ -26131,7 +26131,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 50.0,
         "received": 6280.0,
@@ -26167,7 +26167,7 @@
     "flags": [
       {
         "fps_id": "0304205",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 50.00 KG left (0.8% of this month's stock)",
@@ -26186,7 +26186,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 40.0,
         "received": 8075.0,
@@ -26214,7 +26214,7 @@
     "flags": [
       {
         "fps_id": "0311103",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 40.00 KG left (0.5% of this month's stock)",
@@ -26241,7 +26241,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 695.2,
         "received": 4805.0,
@@ -26304,7 +26304,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 404.0,
         "received": 1884.0,
@@ -26366,7 +26366,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 132.0,
         "received": 4872.0,
@@ -26402,7 +26402,7 @@
     "flags": [
       {
         "fps_id": "0306157",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 132.00 KG left (2.4% of this month's stock)",
@@ -26437,7 +26437,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1305.0,
         "received": 13760.0,
@@ -26481,7 +26481,7 @@
     "flags": [
       {
         "fps_id": "0310146",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 1305.00 KG left (9.0% of this month's stock)",
@@ -26508,7 +26508,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 25.79,
         "received": 5970.0,
@@ -26544,7 +26544,7 @@
     "flags": [
       {
         "fps_id": "0304190",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 25.79 KG left (0.4% of this month's stock)",
@@ -26579,7 +26579,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.2,
         "received": 5375.0,
@@ -26623,7 +26623,7 @@
     "flags": [
       {
         "fps_id": "0304184",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.20 KG left (0.2% of this month's stock)",
@@ -26666,7 +26666,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 70.0,
         "received": 3170.0,
@@ -26694,7 +26694,7 @@
     "flags": [
       {
         "fps_id": "0305207",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 70.00 KG left (2.2% of this month's stock)",
@@ -26729,7 +26729,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 12978.0,
@@ -26784,7 +26784,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 670.4,
         "received": 8845.0,
@@ -26820,7 +26820,7 @@
     "flags": [
       {
         "fps_id": "0306143",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 670.40 KG left (7.3% of this month's stock)",
@@ -26855,7 +26855,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 60.0,
         "received": 4160.0,
@@ -26875,7 +26875,7 @@
     "flags": [
       {
         "fps_id": "0312061",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 60.00 KG left (1.4% of this month's stock)",
@@ -26910,7 +26910,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1750.91,
         "received": 13085.0,
@@ -26981,7 +26981,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 905.0,
         "received": 6130.0,
@@ -27035,7 +27035,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 345.0,
         "received": 3250.0,
@@ -27090,7 +27090,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 545.76,
         "received": 6405.0,
@@ -27142,7 +27142,7 @@
     "flags": [
       {
         "fps_id": "0313024",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 545.76 KG left (8.3% of this month's stock)",
@@ -27177,7 +27177,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 28.0,
         "received": 9675.0,
@@ -27221,7 +27221,7 @@
     "flags": [
       {
         "fps_id": "0311095",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 28.00 KG left (0.3% of this month's stock)",
@@ -27256,7 +27256,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 320.8,
         "received": 6015.0,
@@ -27300,7 +27300,7 @@
     "flags": [
       {
         "fps_id": "0303177",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 320.80 KG left (5.3% of this month's stock)",
@@ -27343,7 +27343,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1040.1,
         "received": 7865.0,
@@ -27398,7 +27398,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 575.7,
         "received": 3845.0,
@@ -27445,7 +27445,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 830.53,
         "received": 6450.0,
@@ -27508,7 +27508,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 425.0,
         "received": 5025.0,
@@ -27536,7 +27536,7 @@
     "flags": [
       {
         "fps_id": "0312054",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 425.00 KG left (7.6% of this month's stock)",
@@ -27555,7 +27555,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 140.7,
         "received": 4305.0,
@@ -27599,7 +27599,7 @@
     "flags": [
       {
         "fps_id": "0311081",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 140.70 KG left (3.2% of this month's stock)",
@@ -27634,7 +27634,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 805.0,
         "received": 7020.0,
@@ -27681,7 +27681,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 258.3,
         "received": 13505.0,
@@ -27717,7 +27717,7 @@
     "flags": [
       {
         "fps_id": "0313030",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 258.30 KG left (1.9% of this month's stock)",
@@ -27752,7 +27752,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 25.0,
         "received": 8530.0,
@@ -27796,7 +27796,7 @@
     "flags": [
       {
         "fps_id": "0301151",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 25.00 KG left (0.3% of this month's stock)",
@@ -27831,7 +27831,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.4,
         "received": 8440.0,
@@ -27867,7 +27867,7 @@
     "flags": [
       {
         "fps_id": "0310167",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.40 KG left (0.1% of this month's stock)",
@@ -27918,7 +27918,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 8115.0,
@@ -27972,7 +27972,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 35.6,
         "received": 6800.0,
@@ -28000,7 +28000,7 @@
     "flags": [
       {
         "fps_id": "0312031",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 35.60 KG left (0.5% of this month's stock)",
@@ -28051,7 +28051,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 2224.0,
         "received": 13980.0,
@@ -28121,7 +28121,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 938.4,
         "received": 12005.0,
@@ -28157,7 +28157,7 @@
     "flags": [
       {
         "fps_id": "0313055",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 938.40 KG left (7.5% of this month's stock)",
@@ -28208,7 +28208,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 15.0,
         "received": 6695.0,
@@ -28244,7 +28244,7 @@
     "flags": [
       {
         "fps_id": "0301134",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 15.00 KG left (0.2% of this month's stock)",
@@ -28263,7 +28263,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 495.4,
         "received": 4065.0,
@@ -28334,7 +28334,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 19.4,
         "received": 7515.0,
@@ -28362,7 +28362,7 @@
     "flags": [
       {
         "fps_id": "0305127",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 19.40 KG left (0.2% of this month's stock)",
@@ -28405,7 +28405,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 705.0,
         "received": 7285.0,
@@ -28449,7 +28449,7 @@
     "flags": [
       {
         "fps_id": "0311111",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 705.00 KG left (8.0% of this month's stock)",
@@ -28476,7 +28476,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 2953.4,
         "received": 10805.0,
@@ -28531,7 +28531,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 170.9,
         "received": 6845.0,
@@ -28575,7 +28575,7 @@
     "flags": [
       {
         "fps_id": "0305194",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 170.90 KG left (2.4% of this month's stock)",
@@ -28618,7 +28618,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 20.0,
         "received": 4020.0,
@@ -28654,7 +28654,7 @@
     "flags": [
       {
         "fps_id": "0304203",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 20.00 KG left (0.5% of this month's stock)",
@@ -28681,7 +28681,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 33.3,
         "received": 2890.0,
@@ -28709,7 +28709,7 @@
     "flags": [
       {
         "fps_id": "0305180",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 33.30 KG left (1.1% of this month's stock)",
@@ -28760,7 +28760,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 365.8,
         "received": 3920.0,
@@ -28796,7 +28796,7 @@
     "flags": [
       {
         "fps_id": "0304173",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 365.80 KG left (8.4% of this month's stock)",
@@ -28831,7 +28831,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 429.0,
         "received": 8835.0,
@@ -28875,7 +28875,7 @@
     "flags": [
       {
         "fps_id": "0311105",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 429.00 KG left (4.6% of this month's stock)",
@@ -28902,7 +28902,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.41,
         "received": 6830.0,
@@ -28946,7 +28946,7 @@
     "flags": [
       {
         "fps_id": "0303168",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.41 KG left (0.0% of this month's stock)",
@@ -28989,7 +28989,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 6.8,
         "received": 2810.0,
@@ -29025,7 +29025,7 @@
     "flags": [
       {
         "fps_id": "0314073",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 6.80 KG left (0.2% of this month's stock)",
@@ -29052,7 +29052,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 155.82,
         "received": 4365.0,
@@ -29088,7 +29088,7 @@
     "flags": [
       {
         "fps_id": "0301120",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 155.82 KG left (3.4% of this month's stock)",
@@ -29123,7 +29123,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.6,
         "received": 7715.0,
@@ -29167,7 +29167,7 @@
     "flags": [
       {
         "fps_id": "0313041",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.60 KG left (0.0% of this month's stock)",
@@ -29202,7 +29202,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 160.6,
         "received": 4475.0,
@@ -29230,7 +29230,7 @@
     "flags": [
       {
         "fps_id": "0312025",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 160.60 KG left (3.6% of this month's stock)",
@@ -29297,7 +29297,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 516.0,
         "received": 13305.0,
@@ -29325,7 +29325,7 @@
     "flags": [
       {
         "fps_id": "0302103",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 516.00 KG left (3.9% of this month's stock)",
@@ -29352,7 +29352,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 335.08,
         "received": 9295.0,
@@ -29380,7 +29380,7 @@
     "flags": [
       {
         "fps_id": "0303180",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 335.08 KG left (3.3% of this month's stock)",
@@ -29423,7 +29423,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 380.0,
         "received": 3495.0,
@@ -29467,7 +29467,7 @@
     "flags": [
       {
         "fps_id": "0314114",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 380.00 KG left (9.8% of this month's stock)",
@@ -29502,7 +29502,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 455.87,
         "received": 16455.0,
@@ -29530,7 +29530,7 @@
     "flags": [
       {
         "fps_id": "0310137",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 455.87 KG left (2.8% of this month's stock)",
@@ -29557,7 +29557,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 445.7,
         "received": 2875.0,
@@ -29612,7 +29612,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 352.0,
         "received": 2727.0,
@@ -29658,7 +29658,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 40.6,
         "received": 7845.0,
@@ -29678,7 +29678,7 @@
     "flags": [
       {
         "fps_id": "0306126",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 40.60 KG left (0.5% of this month's stock)",
@@ -29729,7 +29729,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1669.0,
         "received": 10984.0,
@@ -29775,7 +29775,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 240.0,
         "received": 2900.0,
@@ -29811,7 +29811,7 @@
     "flags": [
       {
         "fps_id": "0312010",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 240.00 KG left (7.6% of this month's stock)",
@@ -29838,7 +29838,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 784.4,
         "received": 3165.0,
@@ -29876,7 +29876,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 10.2,
         "received": 16220.0,
@@ -29920,7 +29920,7 @@
     "flags": [
       {
         "fps_id": "0301115",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 10.20 KG left (0.1% of this month's stock)",
@@ -29963,7 +29963,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 699.0,
         "received": 5884.0,
@@ -30025,7 +30025,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 205.0,
         "received": 7370.0,
@@ -30045,7 +30045,7 @@
     "flags": [
       {
         "fps_id": "0306148",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 205.00 KG left (2.7% of this month's stock)",
@@ -30080,7 +30080,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 215.48,
         "received": 14780.0,
@@ -30124,7 +30124,7 @@
     "flags": [
       {
         "fps_id": "0311076",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 215.48 KG left (1.4% of this month's stock)",
@@ -30167,7 +30167,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.8,
         "received": 3075.0,
@@ -30203,7 +30203,7 @@
     "flags": [
       {
         "fps_id": "0310159",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 0.80 KG left (0.0% of this month's stock)",
@@ -30246,7 +30246,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 5.0,
         "received": 9155.0,
@@ -30282,7 +30282,7 @@
     "flags": [
       {
         "fps_id": "0303171",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 5.00 KG left (0.1% of this month's stock)",
@@ -30317,7 +30317,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 11.9,
         "received": 5936.0,
@@ -30361,7 +30361,7 @@
     "flags": [
       {
         "fps_id": "0313058",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 11.90 KG left (0.2% of this month's stock)",
@@ -30404,7 +30404,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1398.47,
         "received": 14759.0,
@@ -30448,7 +30448,7 @@
     "flags": [
       {
         "fps_id": "0302095",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 1398.47 KG left (8.7% of this month's stock)",
@@ -30475,7 +30475,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 24.8,
         "received": 3500.0,
@@ -30519,7 +30519,7 @@
     "flags": [
       {
         "fps_id": "0305199",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 24.80 KG left (0.6% of this month's stock)",
@@ -30562,7 +30562,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 25.1,
         "received": 3905.0,
@@ -30590,7 +30590,7 @@
     "flags": [
       {
         "fps_id": "0312046",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 25.10 KG left (0.6% of this month's stock)",
@@ -30633,7 +30633,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 20.0,
         "received": 6060.0,
@@ -30669,7 +30669,7 @@
     "flags": [
       {
         "fps_id": "0311093",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 20.00 KG left (0.3% of this month's stock)",
@@ -30696,7 +30696,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1145.45,
         "received": 10745.0,
@@ -30775,7 +30775,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 450.0,
         "received": 5640.0,
@@ -30795,7 +30795,7 @@
     "flags": [
       {
         "fps_id": "0313036",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 450.00 KG left (7.0% of this month's stock)",
@@ -30822,7 +30822,7 @@
     "is_live": false,
     "commodities": [
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 15.0,
         "received": 3665.0,
@@ -30866,7 +30866,7 @@
     "flags": [
       {
         "fps_id": "0311108",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 15.00 KG left (0.4% of this month's stock)",
@@ -30901,7 +30901,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1306.0,
         "received": 9575.0,
@@ -30956,7 +30956,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 22.7,
         "received": 6900.0,
@@ -31000,7 +31000,7 @@
     "flags": [
       {
         "fps_id": "0310161",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 22.70 KG left (0.3% of this month's stock)",
@@ -31051,7 +31051,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 865.0,
         "received": 5570.0,
@@ -31089,7 +31089,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 30.0,
         "received": 5865.0,
@@ -31125,7 +31125,7 @@
     "flags": [
       {
         "fps_id": "0303165",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 30.00 KG left (0.5% of this month's stock)",
@@ -31152,7 +31152,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 900.0,
         "received": 5105.0,
@@ -31198,7 +31198,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 0.0,
         "received": 8430.0,
@@ -31252,7 +31252,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 815.9,
         "received": 7885.0,
@@ -31296,7 +31296,7 @@
     "flags": [
       {
         "fps_id": "0310140",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 815.90 KG left (9.4% of this month's stock)",
@@ -31331,7 +31331,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 40.0,
         "received": 3490.0,
@@ -31351,7 +31351,7 @@
     "flags": [
       {
         "fps_id": "0312009",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 40.00 KG left (1.1% of this month's stock)",
@@ -31394,7 +31394,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 279.3,
         "received": 3705.0,
@@ -31430,7 +31430,7 @@
     "flags": [
       {
         "fps_id": "0314096",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 279.30 KG left (7.2% of this month's stock)",
@@ -31457,7 +31457,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 2020.5,
         "received": 8250.0,
@@ -31536,7 +31536,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 2444.4,
         "received": 11580.0,
@@ -31599,7 +31599,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 130.5,
         "received": 5910.0,
@@ -31627,7 +31627,7 @@
     "flags": [
       {
         "fps_id": "0310154",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 130.50 KG left (2.2% of this month's stock)",
@@ -31662,7 +31662,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 1364.8,
         "received": 6230.0,
@@ -31724,7 +31724,7 @@
         "status": "AVAILABLE"
       },
       {
-        "commodity": "FRice",
+        "commodity": "Rice",
         "unit": "KG",
         "closing": 33.0,
         "received": 3155.0,
@@ -31744,7 +31744,7 @@
     "flags": [
       {
         "fps_id": "0306145",
-        "commodity": "FRice",
+        "commodity": "Rice",
         "flag": "LOW_STOCK",
         "severity": "info",
         "message": "Only 33.00 KG left (1.0% of this month's stock)",

@@ -385,6 +385,8 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [selectedShop, setSelectedShop] = useState(null);
 
+  const reports = asadSummaries;
+
   const t = translations[language];
 
   const filteredReports = reports.filter((report) => {
@@ -497,7 +499,6 @@ export default function App() {
                 >
                   <div className="shop-card-top">
                     <span className="shop-icon">🏪</span>
-                    <span className="status">{t.notLive}</span>
                   </div>
 
                   <h3>FPS {report.fps_id || "Unknown"}</h3>
