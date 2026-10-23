@@ -26,7 +26,10 @@ NUM_RE = re.compile(r"(\d{1,3}(?:[.,]\d{1,3})?)\s*(kg|kgs|g|gm|gms)?\b", re.I)
 # lines that are product descriptions / specs, not a live reading
 IGNORED_LINE_RE = re.compile(
     r"\b(max|min|capacity|cap|model|serial|mercadolibre|amazon|"
-    r"price|product|kitchen scale|unit|resolution|division)\b",
+    r"price|product|kitchen scale|unit|resolution|division|"
+    # bag / packaging labels ("Net Wt 25 kg", "MRP Rs 1200")
+    r"rice|atta|dal|sugar|net\s*wt|net\s*weight|mrp|batch|mfg|exp|"
+    r"best\s*before|pack|packed|bag)\b",
     re.I,
 )
 
