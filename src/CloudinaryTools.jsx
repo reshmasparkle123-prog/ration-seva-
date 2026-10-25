@@ -1,6 +1,9 @@
+
 import { useState } from "react";
 
-const API_BASE = (import.meta.env.VITE_API_URL || "https://ration-seva.onrender.com").replace(/\/+$/, "");
+const API_BASE = (
+  import.meta.env.VITE_API_URL || "https://ration-seva.onrender.com"
+).replace(/\/+$/, "");
 
 export default function CloudinaryTools() {
   const [tool, setTool] = useState("proof");
@@ -15,6 +18,13 @@ export default function CloudinaryTools() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [result, setResult] = useState(null);
+
+  function changeTool(nextTool) {
+    setTool(nextTool);
+    setError("");
+    setResult(null);
+    setImage(null);
+  }
 
   async function submit(eventObject) {
     eventObject.preventDefault();
@@ -46,7 +56,10 @@ export default function CloudinaryTools() {
         return;
       }
 
-      if (!Number.isFinite(allowedDifference) || allowedDifference < 0) {
+      if (
+        !Number.isFinite(allowedDifference) ||
+        allowedDifference < 0
+      ) {
         setError("Tolerance cannot be negative.");
         return;
       }
@@ -57,13 +70,18 @@ export default function CloudinaryTools() {
       form.append("tolerance_kg", String(allowedDifference));
     } else {
       form.append("language", language);
-      if (timings.trim()) form.append("timings", timings.trim());
+
+      if (timings.trim()) {
+        form.append("timings", timings.trim());
+      }
     }
 
     setLoading(true);
 
     try {
-      const response = await fetch(`${API_BASE}/${tool === "scale" ? "scale-check" : tool}`, {
+      const endpoint = tool === "scale" ? "scale-check" : tool;
+
+      const response = await fetch(`${API_BASE}/${endpoint}`, {
         method: "POST",
         body: form,
       });
@@ -71,26 +89,46 @@ export default function CloudinaryTools() {
       const body = await response.json().catch(() => ({}));
 
       if (!response.ok) {
-        throw new Error(body.detail || `Request failed (${response.status})`);
+        throw new Error(
+          body.detail || `Request failed (${response.status})`
+        );
       }
 
       setResult(body);
     } catch (err) {
-      setError(err.message || "Request failed. Check the backend connection.");
+      console.error("RationSeva API request failed:", err);
+
+      setError(
+        err.message === "Failed to fetch"
+          ? "Could not connect to the backend. Check the browser console for the network or CORS error."
+          : err.message || "Request failed. Check the backend connection."
+      );
     } finally {
       setLoading(false);
     }
   }
 
-  function renderResult(value, path = "") {
-    if (value == null) return null;
+  function renderResult(value, path = "result") {
+    if (value == null) return <span>—</span>;
 
     if (typeof value === "object") {
+      if (Array.isArray(value)) {
+        return (
+          <ul>
+            {value.map((child, index) => (
+              <li key={`${path}.${index}`}>
+                {renderResult(child, `${path}.${index}`)}
+              </li>
+            ))}
+          </ul>
+        );
+      }
+
       return (
         <div className="api-result-nested">
           {Object.entries(value).map(([key, child]) => (
             <div key={`${path}.${key}`} className="api-result-row">
-              <strong>{key.replaceAll("_", " ")}:</strong>
+              <strong>{key.replaceAll("_", " ")}: </strong>
               {renderResult(child, `${path}.${key}`)}
             </div>
           ))}
@@ -100,46 +138,81 @@ export default function CloudinaryTools() {
 
     if (
       typeof value === "string" &&
-      /^https?:\/\/\S+$/i.test(value) &&
-      /\.(png|jpe?g|webp|gif)(\?.*)?$/i.test(value)
+      /^https?:\/\/\S+$/i.test(value)
     ) {
+      const isImage =
+        /\.(png|jpe?g|webp|gif)(\?.*)?$/i.test(value);
+
       return (
         <span>
-          <a href={value} target="_blank" rel="noreferrer">Open image</a>
-          <img
-            src={value}
-            alt="Backend-generated result"
-            style={{ display: "block", maxWidth: "100%", maxHeight: 320, marginTop: 8 }}
-          />
+          <a href={value} target="_blank" rel="noreferrer">
+            {isImage ? "Open image" : value}
+          </a>
+          {isImage && (
+            <img
+              src={value}
+              alt="Backend-generated result"
+              style={{
+                display: "block",
+                maxWidth: "100%",
+                maxHeight: 320,
+                marginTop: 8,
+              }}
+            />
+          )}
         </span>
       );
-    }
-
-    if (typeof value === "string" && /^https?:\/\/\S+$/i.test(value)) {
-      return <a href={value} target="_blank" rel="noreferrer">{value}</a>;
     }
 
     return <span>{String(value)}</span>;
   }
 
+  const scaleVerdict =
+    tool === "scale" && result
+      ? String(result.verdict || "").toUpperCase()
+      : "";
+
   return (
-    <section className="cloudinary-tools" aria-labelledby="tools-heading">
+    <section
+      className="cloudinary-tools"
+      aria-labelledby="tools-heading"
+    >
       <p className="eyebrow">PHOTO TOOLS</p>
+
       <h2 id="tools-heading">RationSeva support tools</h2>
+
       <p>
-        Upload evidence or generate a stock notice. Results depend on the
-        submitted image and backend processing; they do not independently
-        verify physical stock.
+        Upload evidence or generate a stock notice. Results depend
+        on the submitted image and backend processing; they do not
+        independently verify physical stock.
       </p>
 
-      <div className="api-tool-tabs" role="group" aria-label="Choose a tool">
-        <button type="button" onClick={() => { setTool("proof"); setError(""); setResult(null); }}>
+      <div
+        className="api-tool-tabs"
+        role="group"
+        aria-label="Choose a tool"
+      >
+        <button
+          type="button"
+          aria-pressed={tool === "proof"}
+          onClick={() => changeTool("proof")}
+        >
           Photo proof
         </button>
-        <button type="button" onClick={() => { setTool("scale"); setError(""); setResult(null); }}>
+
+        <button
+          type="button"
+          aria-pressed={tool === "scale"}
+          onClick={() => changeTool("scale")}
+        >
           Weighing check
         </button>
-        <button type="button" onClick={() => { setTool("notice"); setError(""); setResult(null); }}>
+
+        <button
+          type="button"
+          aria-pressed={tool === "notice"}
+          onClick={() => changeTool("notice")}
+        >
           Stock notice
         </button>
       </div>
@@ -159,20 +232,28 @@ export default function CloudinaryTools() {
           <>
             <label>
               Photo event
-              <select value={event} onChange={(e) => setEvent(e.target.value)}>
+              <select
+                value={event}
+                onChange={(e) => setEvent(e.target.value)}
+              >
                 <option value="stock_arrival">Stock arrival</option>
-                <option value="doorstep_delivery">Doorstep delivery</option>
+                <option value="doorstep_delivery">
+                  Doorstep delivery
+                </option>
                 <option value="weighing">Weighing</option>
-                <option value="complaint">Complaint</option>
+                <option value="complaint">Complaint evidence</option>
               </select>
             </label>
+
             <label>
               Evidence photo
               <input
                 type="file"
                 accept="image/*"
                 capture="environment"
-                onChange={(e) => setImage(e.target.files?.[0] || null)}
+                onChange={(e) =>
+                  setImage(e.target.files?.[0] || null)
+                }
                 required
               />
             </label>
@@ -183,8 +264,13 @@ export default function CloudinaryTools() {
           <>
             <label>
               Commodity
-              <input value={commodity} onChange={(e) => setCommodity(e.target.value)} />
+              <input
+                value={commodity}
+                onChange={(e) => setCommodity(e.target.value)}
+                required
+              />
             </label>
+
             <label>
               Expected weight (kg)
               <input
@@ -196,6 +282,7 @@ export default function CloudinaryTools() {
                 required
               />
             </label>
+
             <label>
               Allowed difference (kg)
               <input
@@ -207,13 +294,16 @@ export default function CloudinaryTools() {
                 required
               />
             </label>
+
             <label>
               Scale photo
               <input
                 type="file"
                 accept="image/*"
                 capture="environment"
-                onChange={(e) => setImage(e.target.files?.[0] || null)}
+                onChange={(e) =>
+                  setImage(e.target.files?.[0] || null)
+                }
                 required
               />
             </label>
@@ -224,12 +314,16 @@ export default function CloudinaryTools() {
           <>
             <label>
               Notice language
-              <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+              <select
+                value={language}
+                onChange={(e) => setLanguage(e.target.value)}
+              >
                 <option value="en">English</option>
                 <option value="hi">Hindi</option>
                 <option value="te">Telugu</option>
               </select>
             </label>
+
             <label>
               Shop timings (optional)
               <input
@@ -243,19 +337,82 @@ export default function CloudinaryTools() {
         )}
 
         <button type="submit" disabled={loading}>
-          {loading ? "Processing…" : tool === "notice" ? "Generate notice" : "Upload and process"}
+          {loading
+            ? "Processing…"
+            : tool === "notice"
+              ? "Generate notice"
+              : "Upload and process"}
         </button>
       </form>
 
-      {error && <p role="alert" className="warning">{error}</p>}
+      {error && (
+        <p role="alert" className="warning">
+          {error}
+        </p>
+      )}
 
       {result && (
         <div className="api-result" aria-live="polite">
-          <h3>Backend response</h3>
+          {tool === "scale" && scaleVerdict === "SHORT_WEIGHT" ? (
+            <>
+              <h3>Review weighing result</h3>
+              <p>
+                The backend reported a possible weight shortage.
+                Review the reading and evidence carefully before
+                deciding what to do next.
+              </p>
+
+              {result.message && <p>{result.message}</p>}
+
+              <p>
+                <strong>Expected weight:</strong>{" "}
+                {result.expected_kg ?? expectedKg} kg
+              </p>
+
+              <p>
+                <strong>Detected reading:</strong>{" "}
+                {result.reading_kg ?? "Unavailable"} kg
+              </p>
+
+              {result.stamped_url && (
+                <p>
+                  <a
+                    href={result.stamped_url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View evidence image
+                  </a>
+                </p>
+              )}
+
+              <p>
+                No complaint has been filed by this result. The
+                current backend response does not confirm complaint
+                submission.
+              </p>
+            </>
+          ) : (
+            <>
+              <h3>
+                {tool === "scale" ? "Weighing result" : "Backend response"}
+              </h3>
+              {tool === "scale" && result.message && (
+                <p>{result.message}</p>
+              )}
+            </>
+          )}
+
           {renderResult(result)}
+
           <details>
             <summary>View raw response</summary>
-            <pre style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere" }}>
+            <pre
+              style={{
+                whiteSpace: "pre-wrap",
+                overflowWrap: "anywhere",
+              }}
+            >
               {JSON.stringify(result, null, 2)}
             </pre>
           </details>

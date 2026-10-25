@@ -1,0 +1,57 @@
+[
+  {
+    "fps_id": "0306122",
+    "district": "Alluri Sitharama Raju",
+    "afso": "Ananthagiri",
+    "data_time": "2026-10-20 22:00",
+    "report_month": "2026-10",
+    "report_date": "2026-10-20",
+    "source": "AP AePDS - Date wise Stock Details (public report)",
+    "is_live": false,
+    "commodities": [
+      {
+        "commodity": "Sugar",
+        "unit": "KG",
+        "closing": 42.0,
+        "received": 0.0,
+        "issued": 0.0,
+        "status": "AVAILABLE"
+      },
+      {
+        "commodity": "FRice",
+        "unit": "KG",
+        "closing": 9.35,
+        "received": 6490.0,
+        "issued": 6890.0,
+        "status": "LOW"
+      },
+      {
+        "commodity": "SUGAR HALF KG",
+        "unit": "PKT",
+        "closing": 185.35,
+        "received": 400.0,
+        "issued": 419.0,
+        "status": "AVAILABLE"
+      }
+    ],
+    "not_allotted_count": 29,
+    "flags": [
+      {
+        "fps_id": "0306122",
+        "commodity": "FRice",
+        "flag": "LOW_STOCK",
+        "severity": "info",
+        "message": "Only 9.35 KG left (0.1% of this month's stock)",
+        "data_time": "2026-10-20 22:00"
+      },
+      {
+        "fps_id": "0306122",
+        "commodity": "SUGAR HALF KG",
+        "flag": "FRACTIONAL_PACKETS",
+        "severity": "warning",
+        "message": "Closing balance 185.35 is not a whole number of packets",
+        "data_time": "2026-10-20 22:00"
+      }
+    ]
+  }
+]

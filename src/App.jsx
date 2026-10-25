@@ -17,8 +17,6 @@ const translations = {
     noStock: "NO REPORTED STOCK",
     warning: "Physical availability is not verified.",
     details: "View all stock details",
-    rice: "Rice",
-    wheat: "Wheat",
     noResults: "No matching shops found.",
     detailHeading: "SHOP DETAILS",
     close: "Close",
@@ -34,19 +32,18 @@ const translations = {
     afso: "AFSO",
     dataTime: "Data time",
     low: "LOW STOCK",
-    fractional: "CHECK DATA",
     flags: "Data warnings",
     noFlags: "No warnings in this summary.",
     notLive: "Historical public report · Not live",
-    stockSummary: "Nonzero reported balances",
+    stockSummary: "Reported stock preview",
     allCommodities: "All reported commodities",
     sourceNotice:
       "Reported quantities are not confirmation of physical stock at the shop.",
-    dataCount: "Loaded shop summaries",
     dataError: "The shop dataset could not be read. Check src/summary.json.",
     reportDate: "Report date",
+    toolsEyebrow: "MORE SERVICES",
+    toolsTitle: "Tools & services",
   },
-
   kn: {
     tagline: "ಹೋಗುವ ಮೊದಲು ತಿಳಿಯಿರಿ",
     description: "ಅಂಗಡಿಗೆ ಹೋಗುವ ಮೊದಲು ವರದಿಯಾದ ಪಡಿತರ ದಾಸ್ತಾನು ಪರಿಶೀಲಿಸಿ.",
@@ -62,6 +59,8 @@ const translations = {
     noResults: "ಹೊಂದಾಣಿಕೆಯ ಅಂಗಡಿಗಳು ಕಂಡುಬಂದಿಲ್ಲ.",
     detailHeading: "ಅಂಗಡಿ ವಿವರಗಳು",
     close: "ಮುಚ್ಚಿ",
+    confirm: "ಭೇಟಿ ನೀಡುವ ಮೊದಲು ಅಂಗಡಿಯಲ್ಲಿ ದೃಢಪಡಿಸಿ.",
+    footer: "ರೇಷನ್ ಸೇವಾ · ಪ್ರತಿಯೊಬ್ಬ ಫಲಾನುಭವಿಗೂ ಪಾರದರ್ಶಕತೆ",
     fresh: "ಇತ್ತೀಚಿನ ವರದಿ",
     stale: "ವರದಿ ಹಳೆಯದಾಗಿರಬಹುದು",
     freshnessUnknown: "ವರದಿ ದಿನಾಂಕ ಲಭ್ಯವಿಲ್ಲ",
@@ -72,20 +71,17 @@ const translations = {
     afso: "AFSO",
     dataTime: "ಡೇಟಾ ಸಮಯ",
     low: "ಕಡಿಮೆ ದಾಸ್ತಾನು",
-    fractional: "ಡೇಟಾ ಪರಿಶೀಲಿಸಿ",
     flags: "ಡೇಟಾ ಎಚ್ಚರಿಕೆಗಳು",
     noFlags: "ಈ ಸಾರಾಂಶದಲ್ಲಿ ಎಚ್ಚರಿಕೆಗಳಿಲ್ಲ.",
     notLive: "ಹಿಂದಿನ ಸಾರ್ವಜನಿಕ ವರದಿ · ನೈಜ ಸಮಯದ ಡೇಟಾ ಅಲ್ಲ",
-    stockSummary: "ಶೂನ್ಯಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ವರದಿಯಾದ ದಾಸ್ತಾನು",
+    stockSummary: "ವರದಿಯಾದ ದಾಸ್ತಾನು ಪೂರ್ವವೀಕ್ಷಣೆ",
     allCommodities: "ಎಲ್ಲಾ ವರದಿಯಾದ ವಸ್ತುಗಳು",
-    sourceNotice: "ವರದಿಯಾದ ಪ್ರಮಾಣವು ಅಂಗಡಿಯ ನೈಜ ದಾಸ್ತಾನು ದೃಢೀಕರಣವಲ್ಲ.",
-    clearSearch: "ಹುಡುಕಾಟ ತೆರವುಗೊಳಿಸಿ",
-    confirm: "ಭೇಟಿ ನೀಡುವ ಮೊದಲು ಅಂಗಡಿಯಲ್ಲಿ ದೃಢಪಡಿಸಿ.",
-    footer: "ರೇಷನ್ ಸೇವಾ · ಪ್ರತಿಯೊಬ್ಬ ಫಲಾನುಭವಿಗೂ ಪಾರದರ್ಶಕತೆ",
-    reportDate: "ವರದಿ ದಿನಾಂಕ",
+    sourceNotice: "ವರದಿಯಾದ ಪ್ರಮಾಣವು ನೈಜ ದಾಸ್ತಾನು ದೃಢೀಕರಣವಲ್ಲ.",
     dataError: "ಡೇಟಾಸೆಟ್ ಓದಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. src/summary.json ಪರಿಶೀಲಿಸಿ.",
+    reportDate: "ವರದಿ ದಿನಾಂಕ",
+    toolsEyebrow: "ಹೆಚ್ಚುವರಿ ಸೇವೆಗಳು",
+    toolsTitle: "ಪರಿಕರಗಳು ಮತ್ತು ಸೇವೆಗಳು",
   },
-
   hi: {
     tagline: "जाने से पहले जानें",
     description: "दुकान जाने से पहले रिपोर्ट किया गया राशन स्टॉक देखें।",
@@ -101,6 +97,8 @@ const translations = {
     noResults: "कोई मेल खाती दुकान नहीं मिली।",
     detailHeading: "दुकान का विवरण",
     close: "बंद करें",
+    confirm: "जाने से पहले दुकान से पुष्टि करें।",
+    footer: "राशन सेवा · हर लाभार्थी के लिए पारदर्शिता",
     fresh: "हाल की रिपोर्ट",
     stale: "रिपोर्ट पुरानी हो सकती है",
     freshnessUnknown: "रिपोर्ट की तारीख उपलब्ध नहीं है",
@@ -111,24 +109,20 @@ const translations = {
     afso: "AFSO",
     dataTime: "डेटा का समय",
     low: "कम स्टॉक",
-    fractional: "डेटा जाँचें",
     flags: "डेटा चेतावनियाँ",
     noFlags: "इस सारांश में कोई चेतावनी नहीं है।",
     notLive: "पुरानी सार्वजनिक रिपोर्ट · लाइव नहीं",
-    stockSummary: "शून्य से अधिक रिपोर्ट किया गया स्टॉक",
+    stockSummary: "रिपोर्ट किए गए स्टॉक की झलक",
     allCommodities: "सभी रिपोर्ट की गई वस्तुएँ",
     sourceNotice:
       "रिपोर्ट की गई मात्रा दुकान के वास्तविक स्टॉक की पुष्टि नहीं है।",
-    clearSearch: "खोज साफ़ करें",
-    confirm: "जाने से पहले दुकान से पुष्टि करें।",
-    footer: "राशन सेवा · हर लाभार्थी के लिए पारदर्शिता",
-    reportDate: "रिपोर्ट की तारीख",
     dataError: "डेटासेट नहीं पढ़ा जा सका। src/summary.json जाँचें।",
+    reportDate: "रिपोर्ट की तारीख",
+    toolsEyebrow: "अतिरिक्त सेवाएँ",
+    toolsTitle: "टूल और सेवाएँ",
   },
 };
 
-// The directory dataset is imported directly from src/summary.json.
-// It contains historical public-report summaries, not live-verified stock.
 const reports = Array.isArray(asadSummaries)
   ? asadSummaries
   : Array.isArray(asadSummaries?.reports)
@@ -210,8 +204,6 @@ function getCommodityStatus(item) {
   const existingStatus = String(item?.status || "").toUpperCase();
 
   if (closing <= 0) return "OUT_OF_STOCK";
-
-  // Preserve dataset flags and use a clearly labelled prototype rule for FRice.
   if (existingStatus === "LOW") return "LOW";
 
   if (
@@ -228,7 +220,6 @@ function getSafeFlags(report) {
   return (Array.isArray(report?.flags) ? report.flags : []).map((flag) => {
     const flagType = String(flag?.flag || "").toUpperCase();
 
-    // Avoid presenting an unverified percentage calculation as authoritative.
     if (flagType === "LOW_STOCK") {
       const item = (report.commodities || []).find(
         (commodity) =>
@@ -241,7 +232,9 @@ function getSafeFlags(report) {
       return {
         ...flag,
         message: Number.isFinite(closing)
-          ? `Reported closing balance: ${closing.toLocaleString("en-IN")} ${item?.unit || ""}. This is a prototype low-stock warning, not an official threshold.`
+          ? `Reported closing balance: ${closing.toLocaleString("en-IN")} ${
+              item?.unit || ""
+            }. This is a prototype low-stock warning, not an official threshold.`
           : "A low-stock warning appears in the source summary. Verify the reported quantity before relying on it.",
       };
     }
@@ -332,7 +325,7 @@ function ShopDetails({ report, onClose, t }) {
       <p className="demo-notice">ⓘ {t.notLive}</p>
       <p className="stock-label">{t.allCommodities}</p>
 
-      <div className="commodities">
+      <div className="commodities details-commodities">
         {commodities.map((item, index) => (
           <CommodityCard
             key={`${item.commodity}-${index}`}
@@ -355,7 +348,7 @@ function ShopDetails({ report, onClose, t }) {
           </p>
         ))
       ) : (
-        <p>{t.noFlags}</p>
+        <p className="muted-copy">{t.noFlags}</p>
       )}
 
       <p className="updated">
@@ -386,8 +379,6 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [selectedShop, setSelectedShop] = useState(null);
 
-  const reports = asadSummaries;
-
   const t = translations[language];
 
   const filteredReports = reports.filter((report) => {
@@ -413,7 +404,7 @@ export default function App() {
   return (
     <main className="app">
       <header className="topbar">
-        <a className="brand" href="#">
+        <a className="brand" href="#" aria-label="Ration Seva home">
           <span className="brand-icon">🌾</span>
           <span>Ration Seva</span>
         </a>
@@ -445,27 +436,43 @@ export default function App() {
         <h1>{t.tagline}</h1>
         <p className="hero-copy">{t.description}</p>
 
-        <input
-          className="search"
-          type="search"
-          placeholder={t.search}
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          aria-label={t.search}
-        />
+        <div className="search-wrap">
+          <span className="search-icon" aria-hidden="true">
+            ⌕
+          </span>
 
-        {query.trim() !== "" && (
-          <button
-            type="button"
-            className="details-button"
-            onClick={() => setQuery("")}
-          >
-            {t.clearSearch}
-          </button>
-        )}
+          <input
+            className="search"
+            type="search"
+            placeholder={t.search}
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            aria-label={t.search}
+          />
+
+          {query.trim() !== "" && (
+            <button
+              type="button"
+              className="clear-search"
+              onClick={() => setQuery("")}
+            >
+              {t.clearSearch}
+            </button>
+          )}
+        </div>
       </section>
 
-      <CloudinaryTools />
+      {/* Tools now appear before the shop directory. */}
+      <section className="tools-section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">{t.toolsEyebrow}</p>
+            <h2>{t.toolsTitle}</h2>
+          </div>
+        </div>
+
+        <CloudinaryTools />
+      </section>
 
       <section className="shop-section">
         <div className="section-heading">
@@ -483,6 +490,8 @@ export default function App() {
 
         {reports.length === 0 ? (
           <p className="warning">{t.dataError}</p>
+        ) : filteredReports.length === 0 ? (
+          <p className="empty">{t.noResults}</p>
         ) : (
           <div className="shop-grid">
             {filteredReports.map((report, reportIndex) => {
@@ -495,26 +504,38 @@ export default function App() {
                   !isPackaging(item) && Number(item.closing) > 0
               );
 
+              const previewCommodities = nonzeroCommodities.slice(0, 4);
+              const remainingCount = Math.max(
+                0,
+                nonzeroCommodities.length - previewCommodities.length
+              );
+
               return (
                 <article
                   className="shop-card"
                   key={`${report.fps_id}-${report.report_date || reportIndex}`}
                 >
                   <div className="shop-card-top">
-                    <span className="shop-icon">🏪</span>
+                    <span className="shop-icon" aria-hidden="true">
+                      🏪
+                    </span>
+                    <span className="shop-id-label">
+                      FPS {report.fps_id || "Unknown"}
+                    </span>
                   </div>
 
-                  <h3>FPS {report.fps_id || "Unknown"}</h3>
+                  <h3>{report.district || "Ration shop"}</h3>
 
                   <p className="shop-meta">
-                    {report.district || "—"} · {t.afso}: {report.afso || "—"}
+                    {t.district}: {report.district || "—"} · {t.afso}:{" "}
+                    {report.afso || "—"}
                   </p>
 
                   <p className="stock-label">{t.stockSummary}</p>
 
-                  {nonzeroCommodities.length > 0 ? (
+                  {previewCommodities.length > 0 ? (
                     <div className="commodities">
-                      {nonzeroCommodities.map((item, index) => (
+                      {previewCommodities.map((item, index) => (
                         <CommodityCard
                           key={`${item.commodity}-${index}`}
                           item={item}
@@ -523,7 +544,13 @@ export default function App() {
                       ))}
                     </div>
                   ) : (
-                    <p>{t.noStock}</p>
+                    <p className="empty-stock">{t.noStock}</p>
+                  )}
+
+                  {remainingCount > 0 && (
+                    <p className="more-stock">
+                      +{remainingCount} more commodities in shop details
+                    </p>
                   )}
 
                   <p className="updated">
@@ -542,15 +569,11 @@ export default function App() {
                     className="details-button"
                     onClick={() => setSelectedShop(report)}
                   >
-                    {t.details} →
+                    {t.details} <span aria-hidden="true">→</span>
                   </button>
                 </article>
               );
             })}
-
-            {filteredReports.length === 0 && (
-              <p className="empty">{t.noResults}</p>
-            )}
           </div>
         )}
       </section>
